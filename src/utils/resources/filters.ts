@@ -1,39 +1,48 @@
-import { ScrapedData } from '../../types/resources';
+import { ScrapedData, ResourceCategory } from '../../types/resources';
 
 /**
- * Filters out outdated or inappropriate resources from the data set
- * @param items Array of scraped data items
- * @returns Filtered array with removed resources excluded
+ * Filter out resources that shouldn't be displayed at all
  */
 export const filterRemovedResources = (items: ScrapedData[]): ScrapedData[] => {
   return items.filter(item => {
-    // Remove CDC resources as they no longer exist
-    if (item.title === "CDC - Transgender Health" || 
-        item.name === "CDC - Transgender Health" || 
-        (item.source === "CDC" && item.title.toLowerCase().includes("transgender"))) {
+    const title = item.title?.toLowerCase() || '';
+    const source = item.source?.toLowerCase() || '';
+    const content = item.content?.toLowerCase() || '';
+
+    // Specifically exclude the State Department international travel resource
+    if (source.includes('u.s. department of state') && 
+        (title.includes('international travel') || 
+         title.includes('travel guidance') ||
+         (content.includes('country-specific') && content.includes('lgbtqi+')))) {
       return false;
     }
-    
-    // Remove Lex as it's a social app, not an informational resource
-    if (item.title === "Lex - Text-Centered Community Platform" || 
-        item.name === "Lex" || 
-        item.source === "Lex") {
+
+    // Skip TSA precheck content only (but keep other TSA content)
+    if (title.includes('precheck') || content.includes('tsa precheck')) {
       return false;
     }
-    
-    // Remove generic resources that aren't focused on transgender travelers
-    if (item.url === "https://www.usa.gov/passport" ||
-        (item.url && item.url.toLowerCase().includes("usa.gov")) ||
-        item.name === "USA.gov Passport Information") {
+
+    // Skip ACLU workplace discrimination content
+    if (source.includes('aclu') && 
+        (title.includes('workplace') || title.includes('employment'))) {
       return false;
     }
-    
-    // Remove outdated TSA pages
-    if (item.url === "https://www.tsa.gov/travel/tsa-cares/gender-diversity" ||
-        (item.url && item.url.toLowerCase().includes("tsa-cares/gender-diversity"))) {
+
+    // Skip STEP program information as it's not advisable
+    if (title.includes('step program') || content.includes('smart traveler enrollment')) {
       return false;
     }
-    
+
+    // Skip general State Department notices not specific to trans travelers
+    // But keep other State Department content
+    if (source.includes('state department') && 
+        title.includes('notice') && 
+        !title.includes('transgender') && 
+        !title.includes('gender') &&
+        !title.includes('passport')) {
+      return false;
+    }
+
     return true;
   });
 };
@@ -135,4 +144,124 @@ export const sortByPriorityAndDate = (a: ScrapedData, b: ScrapedData): number =>
   } catch (e) {
     return 0;
   }
+};
+
+/**
+ * Categorize resources based on content analysis
+ * This is used to assign primaryCategory and secondaryCategories to resources
+ * that don't have them explicitly set
+ */
+export const categorizeResource = (resource: ScrapedData): ScrapedData => {
+  // Don't modify if already categorized
+  if (resource.primaryCategory) {
+    return resource;
+  }
+
+  const result = { ...resource };
+  const title = result.title?.toLowerCase() || '';
+  const source = result.source?.toLowerCase() || '';
+  const content = result.content?.toLowerCase() || '';
+  const tags = result.tags?.map(tag => tag.toLowerCase()) || [];
+
+  // Create a secondary categories array if needed
+  if (!result.secondaryCategories) {
+    result.secondaryCategories = [];
+  }
+
+  // Current Alerts
+  if (
+    (title.includes('warning') && new Date(result.lastUpdated) > new Date('2025-02-15')) ||
+    title.includes('advisory') ||
+    title.includes('alert') ||
+    source.includes('garden state') ||
+    (title.includes('germany') && title.includes('transgender')) ||
+    (title.includes('rubio') && title.includes('transgender')) ||
+    (source.includes('advocate') && title.includes('germany')) ||
+    (source.includes('erin') && title.includes('visa'))
+  ) {
+    result.primaryCategory = 'currentAlerts';
+  } 
+  // Identity Documents
+  else if (
+    tags.some(tag => 
+      tag.includes('documentation') || 
+      tag.includes('passport') || 
+      tag.includes('id') || 
+      tag.includes('identity')
+    ) ||
+    title.includes('passport') ||
+    title.includes('id ') || // space after 'id' to avoid matching words containing 'id'
+    title.includes('identity') ||
+    title.includes('document') ||
+    content.includes('passport policy') ||
+    content.includes('gender marker')
+  ) {
+    result.primaryCategory = 'identityDocuments';
+  }
+  // Travel Planning
+  else if (
+    (title.includes('visa') || 
+     content.includes('visa policy') ||
+     content.includes('visa requirement')) ||
+    (source.includes('erin') && 
+     (title.includes('travel') || 
+      title.includes('border'))) ||
+    tags.some(tag => 
+      tag.includes('travel') || 
+      tag.includes('planning')
+    ) ||
+    title.includes('travel')
+  ) {
+    result.primaryCategory = 'travelPlanning';
+  }
+  // Community Resources
+  else if (
+    tags.some(tag => 
+      tag.includes('community') || 
+      tag.includes('resource') ||
+      tag.includes('support')
+    ) ||
+    source.includes('lambda legal') ||
+    source.includes('transgender law')
+  ) {
+    result.primaryCategory = 'communityResources';
+  }
+  // Default to all resources if no specific category
+  else {
+    result.primaryCategory = 'allResources';
+  }
+
+  // Add to all resources as a secondary category
+  if (result.primaryCategory !== 'allResources') {
+    result.secondaryCategories.push('allResources');
+  }
+
+  return result;
+};
+
+/**
+ * Check if a resource belongs in a specific category
+ */
+export const isResourceInCategory = (resource: ScrapedData, category: ResourceCategory): boolean => {
+  // First categorize the resource if it's not already categorized
+  const categorizedResource = resource.primaryCategory 
+    ? resource 
+    : categorizeResource(resource);
+  
+  // Check if this is the primary category
+  if (categorizedResource.primaryCategory === category) {
+    return true;
+  }
+  
+  // Check if this is a secondary category
+  if (categorizedResource.secondaryCategories?.includes(category)) {
+    return true;
+  }
+  
+  // All resources always show in the all resources tab
+  if (category === 'allResources') {
+    return true;
+  }
+  
+  return false;
 }; 

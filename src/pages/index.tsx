@@ -41,6 +41,9 @@ import {
 // Import translation hook
 import { useTranslation } from '../translations/useTranslation';
 
+// Import static alerts
+import staticAlerts from '../data/staticAlerts';
+
 export default function Home() {
   // Use translation
   const { t } = useTranslation();
@@ -152,31 +155,54 @@ export default function Home() {
                         {t('content.alertsDescription')}
                       </Text>
 
-                      {/* Primary Passport Alert - Keep only this main alert for visual clarity */}
-                      <Alert status="warning" borderRadius="md" mt={4}>
-                        <AlertIcon />
-                        <Text>
-                          {t('content.passportUpdate')}
-                        </Text>
-                      </Alert>
+                      {/* Static Passport Alert */}
+                      {staticAlerts.currentAlerts.map((alert, idx) => (
+                        <Alert key={`static-alert-current-${idx}`} status={alert.status as any} borderRadius="md" mt={4}>
+                          <AlertIcon />
+                          <Text>{alert.text}</Text>
+                        </Alert>
+                      ))}
 
-                      {/* Travel Advisories as cards instead of alerts */}
+                      {/* Travel Advisories as cards */}
                       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} mt={4}>
                         {filteredData
-                          .filter(item => (
-                            // Only include truly important, time-sensitive alerts in this section
-                            (item.title.toLowerCase().includes('warning') && 
-                             item.lastUpdated && 
-                             new Date(item.lastUpdated) > new Date('2025-02-15')) || // Only recent warnings
-                            (item.title.toLowerCase().includes('advisory')) || // Include all advisories
-                            // New Jersey travel advisory
-                            (item.source?.toLowerCase().includes('garden state')) ||
-                            // Specifically include resources about current visa/entry policies  
-                            (item.source?.toLowerCase().includes('advocate') && 
-                             item.title.toLowerCase().includes('germany')) ||
-                            (item.source?.toLowerCase().includes('erin') && 
-                             item.title.toLowerCase().includes('visa'))
-                          ))
+                          .filter(item => {
+                            const title = item.title?.toLowerCase() || '';
+                            const source = item.source?.toLowerCase() || '';
+                            const content = item.content?.toLowerCase() || '';
+                            
+                            // Exclude State Department international travel guidance
+                            if (source.includes('u.s. department of state') && 
+                                (title.includes('international travel') || 
+                                 title.includes('travel guidance') ||
+                                 (content.includes('country-specific') && 
+                                  content.includes('lgbtqi+')))) {
+                              return false;
+                            }
+                            
+                            // Include important alerts
+                            return (
+                              // Only include truly important, time-sensitive alerts in this section
+                              (title.includes('warning') && 
+                               item.lastUpdated && 
+                               new Date(item.lastUpdated) > new Date('2025-02-15')) || // Only recent warnings
+                              (title.includes('advisory')) || // Include all advisories
+                              title.includes('alert') || // Include alerts
+                              // New Jersey travel advisory
+                              (source.includes('garden state')) ||
+                              // Specifically include resources about current visa/entry policies  
+                              (source.includes('advocate') && 
+                               title.includes('germany')) ||
+                              (source.includes('erin') && 
+                               title.includes('visa')) ||
+                              // Ensure the Marco Rubio visa ban news is included
+                              (title.includes('rubio') && 
+                               title.includes('transgender')) ||
+                              // Ensure Germany travel advisory is included
+                              (title.includes('germany') && 
+                               title.includes('transgender'))
+                            );
+                          })
                           .map((item, index) => (
                             <ResourceCard
                               key={`alert-${index}`}
@@ -199,19 +225,55 @@ export default function Home() {
                         {t('content.travelPlanningDescription')}
                       </Text>
                       
+                      {/* Static Travel Planning Alerts */}
+                      {staticAlerts.travelPlanning.map((alert, idx) => (
+                        <Alert key={`static-alert-travel-${idx}`} status={alert.status as any} borderRadius="md" mt={4}>
+                          <AlertIcon />
+                          <Text>{alert.text}</Text>
+                        </Alert>
+                      ))}
+                      
                       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
                         {filteredData
-                          .filter(item => 
-                            item.tags?.some(tag => 
-                              tag.toLowerCase().includes('travel') || 
-                              tag.toLowerCase().includes('planning') ||
-                              tag.toLowerCase().includes('security')
-                            ) ||
-                            item.title.toLowerCase().includes('travel') ||
-                            item.title.toLowerCase().includes('security') ||
-                            item.title.toLowerCase().includes('tsa') ||
-                            item.source?.toLowerCase().includes('tsa')
-                          )
+                          .filter(item => {
+                            const title = item.title?.toLowerCase() || '';
+                            const source = item.source?.toLowerCase() || '';
+                            const content = item.content?.toLowerCase() || '';
+                            const tags = item.tags?.map(tag => tag.toLowerCase()) || [];
+                            
+                            // Include relevant travel planning content
+                            const isRelevant = (
+                              (title.includes('visa') || 
+                               content.includes('visa policy') ||
+                               content.includes('visa requirement')) ||
+                              (source.includes('erin') && 
+                               (title.includes('travel') || 
+                                title.includes('border'))) ||
+                              tags.some(tag => 
+                                tag.includes('travel') || 
+                                tag.includes('planning')
+                              ) ||
+                              title.includes('travel')
+                            );
+                            
+                            // Exclude unwanted content types
+                            const shouldExclude = 
+                              title.includes('precheck') ||
+                              content.includes('tsa precheck') ||
+                              (source.includes('tsa')) ||
+                              (source.includes('state department') && 
+                               title.includes('notice')) ||
+                              title.includes('step program') ||
+                              content.includes('smart traveler enrollment') ||
+                              // Specifically exclude State Department international travel
+                              (source.includes('u.s. department of state') && 
+                               (title.includes('international travel') || 
+                                title.includes('travel guidance') ||
+                                (content.includes('country-specific') && 
+                                 content.includes('lgbtqi+'))));
+                              
+                            return isRelevant && !shouldExclude;
+                          })
                           .map((resource, index) => (
                             <ResourceCard
                               key={`travel-${index}`}
@@ -226,13 +288,21 @@ export default function Home() {
                     </VStack>
                   </TabPanel>
                   
-                  {/* DOCUMENTATION TAB */}
+                  {/* IDENTITY DOCUMENTS TAB */}
                   <TabPanel>
                     <VStack spacing={6} align="stretch">
                       <Heading size="lg" mb={2}>{t('tabs.documentation')}</Heading>
                       <Text>
                         {t('content.documentationDescription')}
                       </Text>
+                      
+                      {/* Static Identity Documents Alerts */}
+                      {staticAlerts.identityDocuments.map((alert, idx) => (
+                        <Alert key={`static-alert-identity-${idx}`} status={alert.status as any} borderRadius="md" mt={4}>
+                          <AlertIcon />
+                          <Text>{alert.text}</Text>
+                        </Alert>
+                      ))}
                       
                       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
                         {filteredData
@@ -244,7 +314,8 @@ export default function Home() {
                               tag.toLowerCase().includes('identity')
                             ) ||
                             item.title.toLowerCase().includes('passport') ||
-                            item.title.toLowerCase().includes('id') ||
+                            item.title.toLowerCase().includes('id ') || // Space after "id" to avoid partial matches
+                            item.title.toLowerCase().includes('identity') ||
                             item.title.toLowerCase().includes('document') ||
                             item.content?.toLowerCase().includes('passport policy') ||
                             item.content?.toLowerCase().includes('gender marker')
@@ -263,7 +334,7 @@ export default function Home() {
                     </VStack>
                   </TabPanel>
                   
-                  {/* LEGAL RESOURCES TAB */}
+                  {/* COMMUNITY RESOURCES TAB */}
                   <TabPanel>
                     <VStack spacing={6} align="stretch">
                       <Heading size="lg" mb={2}>{t('tabs.legalResources')}</Heading>
@@ -271,24 +342,43 @@ export default function Home() {
                         {t('content.legalResourcesDescription')}
                       </Text>
                       
+                      {/* Static Community Resources Alerts (currently none) */}
+                      {staticAlerts.communityResources.map((alert, idx) => (
+                        <Alert key={`static-alert-community-${idx}`} status={alert.status as any} borderRadius="md" mt={4}>
+                          <AlertIcon />
+                          <Text>{alert.text}</Text>
+                        </Alert>
+                      ))}
+                      
                       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
                         {filteredData
-                          .filter(item => 
-                            item.tags?.some(tag => 
-                              tag.toLowerCase().includes('legal') || 
-                              tag.toLowerCase().includes('resource') ||
-                              tag.toLowerCase().includes('support')
+                          .filter(item => {
+                            const title = item.title?.toLowerCase() || '';
+                            const source = item.source?.toLowerCase() || '';
+                            const tags = item.tags?.map(tag => tag.toLowerCase()) || [];
+                            
+                            // Include relevant community resources
+                            const isRelevant = tags.some(tag => 
+                              tag.includes('community') || 
+                              tag.includes('resource') ||
+                              tag.includes('support')
                             ) ||
-                            item.title.toLowerCase().includes('legal') ||
-                            item.title.toLowerCase().includes('right') ||
-                            item.title.toLowerCase().includes('support') ||
-                            item.source?.toLowerCase().includes('lambda legal') ||
-                            item.source?.toLowerCase().includes('aclu') ||
-                            item.source?.toLowerCase().includes('transgender law')
-                          )
+                            source.includes('lambda legal') ||
+                            source.includes('transgender law');
+                            
+                            // Exclude unwanted content
+                            const shouldExclude = 
+                              title.includes('germany') ||
+                              title.includes('rubio') ||
+                              (source.includes('aclu') && 
+                               (title.includes('workplace') || 
+                                title.includes('employment')));
+                                
+                            return isRelevant && !shouldExclude;
+                          })
                           .map((resource, index) => (
                             <ResourceCard
-                              key={`legal-${index}`}
+                              key={`community-${index}`}
                               resource={resource}
                               colorMode={colorMode}
                               formatDate={formatDate}
@@ -318,16 +408,58 @@ export default function Home() {
                         </Alert>
                       ) : (
                         <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
-                          {filteredData.map((resource, index) => (
-                            <ResourceCard
-                              key={`all-${index}`}
-                              resource={resource}
-                              colorMode={colorMode}
-                              formatDate={formatDate}
-                              getPriorityBadgeProps={getPriorityBadgeProps}
-                              getResourceTypeWithYear={getResourceTypeWithYear}
-                            />
-                          ))}
+                          {filteredData
+                            // Exclude unwanted content from all resources tab
+                            .filter(item => {
+                              const title = item.title?.toLowerCase() || '';
+                              const source = item.source?.toLowerCase() || '';
+                              const content = item.content?.toLowerCase() || '';
+                              
+                              // Exclude TSA precheck content
+                              if (title.includes('precheck') || content.includes('tsa precheck')) {
+                                return false;
+                              }
+                              
+                              // Exclude ACLU workplace discrimination content
+                              if (source.includes('aclu') && 
+                                  (title.includes('workplace') || title.includes('employment'))) {
+                                return false;
+                              }
+                              
+                              // Exclude STEP program information
+                              if (title.includes('step program') || 
+                                  content.includes('smart traveler enrollment')) {
+                                return false;
+                              }
+                              
+                              // Exclude general TSA content not specific to transgender travel
+                              if (source.includes('tsa') && 
+                                  !title.includes('transgender') && 
+                                  !title.includes('nonbinary')) {
+                                return false;
+                              }
+                              
+                              // Exclude State Department international travel guidance
+                              if (source.includes('u.s. department of state') && 
+                                  (title.includes('international travel') || 
+                                   title.includes('travel guidance') ||
+                                   (content.includes('country-specific') && 
+                                    content.includes('lgbtqi+')))) {
+                                return false;
+                              }
+                              
+                              return true;
+                            })
+                            .map((resource, index) => (
+                              <ResourceCard
+                                key={`all-${index}`}
+                                resource={resource}
+                                colorMode={colorMode}
+                                formatDate={formatDate}
+                                getPriorityBadgeProps={getPriorityBadgeProps}
+                                getResourceTypeWithYear={getResourceTypeWithYear}
+                              />
+                            ))}
                         </SimpleGrid>
                       )}
                     </VStack>

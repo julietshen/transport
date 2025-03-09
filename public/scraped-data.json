@@ -1,5 +1,18 @@
 [
   {
+    "source": "Reuters",
+    "title": "New Trump travel ban could bar Afghans, Pakistanis soon, sources say",
+    "content": "The United States is considering imposing new travel restrictions on people from countries including Afghanistan and Pakistan, according to U.S. officials familiar with the matter. The potential ban, which could affect thousands of travelers and immigrants, is part of the Trump administration's broader immigration policy changes. Human rights advocates have expressed concern about the impact on transgender and nonbinary individuals from these countries, who may face additional scrutiny or be denied entry entirely. This could significantly affect those seeking asylum based on gender identity persecution in their home countries.",
+    "lastUpdated": "2025-03-06T14:30:00.000Z",
+    "url": "https://www.reuters.com/world/us/new-trump-travel-ban-could-bar-afghans-pakistanis-soon-sources-say-2025-03-06/",
+    "tags": [
+      "news",
+      "international",
+      "immigration"
+    ],
+    "name": "US Travel Ban Alert"
+  },
+  {
     "source": "The Advocate",
     "title": "Germany Issues Warning for Transgender & Nonbinary People Traveling to the US",
     "content": "The German government has issued an official warning for transgender and nonbinary citizens planning travel to the United States. A German official confirmed to The Advocate that 'transgender and nonbinary individuals traveling from Germany to the United States should contact the responsible U.S. authorities prior to travel to the U.S. to inquire about current entry regulations.' This advisory follows the Trump administration's recent executive order mandating that all government-issued documents, including passports, reflect only an individual's sex assigned at birth. The State Department has instructed consular officers to flag visa applications where there is 'reasonable suspicion' that an applicant is transgender, which critics say effectively bans transgender visa holders from entry.",
@@ -145,32 +158,17 @@
     ]
   },
   {
-    "name": "Smart Traveler Enrollment Program (STEP)",
-    "category": "Emergency",
-    "source": "U.S. Department of State",
-    "title": "Smart Traveler Enrollment Program (STEP)",
-    "content": "STEP is a free service allowing U.S. citizens traveling or living abroad to register their trip with the nearest U.S. Embassy or Consulate. Benefits include receiving important information about safety conditions, contact information for the nearest U.S. embassy or consulate, and assistance during emergencies such as natural disasters or civil unrest.",
-    "url": "https://step.state.gov/",
-    "lastUpdated": "2025-03-08T21:40:58.435Z",
-    "tags": [
-      "international",
-      "emergency",
-      "safety",
-      "government"
-    ]
-  },
-  {
     "source": "Equaldex",
     "name": "Equaldex - Global LGBTQ Rights Index",
     "title": "LGBT Rights by Country & Travel Guide | Equaldex",
-    "content": "Equaldex provides a comprehensive, up-to-date index of LGBTQ+ rights across different countries, essential for transgender travelers planning international trips. The platform offers detailed information about legal protections, recognition of gender identity, healthcare access, anti-discrimination laws, and overall safety ratings for destinations worldwide. The interactive map and country-specific pages help travelers make informed decisions about where it's safe to travel and what legal challenges they might face in different regions.",
-    "lastUpdated": "2025-03-08T21:40:55.727Z",
+    "content": "Equaldex provides a comprehensive, up-to-date database of LGBTQ+ rights and laws worldwide. The interactive map and country profiles detail legal protections, restrictions, and social attitudes affecting transgender and nonbinary travelers. Each country entry includes information on legal gender recognition, anti-discrimination protections, and hate crime laws. The resource is regularly updated to reflect policy changes and can help transgender individuals make informed decisions about international travel safety and navigate potentially challenging situations abroad.",
     "url": "https://www.equaldex.com/",
+    "lastUpdated": "2025-03-08T21:40:58.401Z",
     "tags": [
       "international",
       "legal",
       "safety",
-      "rights"
+      "resources"
     ]
   },
   {
@@ -253,31 +251,31 @@
     ]
   },
   {
-    "source": "U.S. Department of State",
-    "name": "State Department LGBTQI+ Travel Information",
-    "title": "International Travel",
-    "content": "The U.S. Department of State provides important travel guidance specifically for LGBTQI+ travelers. This resource includes country-specific information about laws that might affect LGBTQI+ visitors, safety considerations, and tips for navigating international travel safely. The information covers topics such as legal recognition of same-sex relationships, laws regarding gender expression, and areas where LGBTQI+ travelers may face increased scrutiny or discrimination. This is an essential resource for transgender travelers planning international trips.",
-    "lastUpdated": "2025-03-08T21:40:48.878Z",
-    "url": "https://travel.state.gov/content/travel/en/international-travel/before-you-go/travelers-with-special-considerations/lgbti.html",
+    "source": "TSA",
+    "title": "Transgender Travelers: Special Considerations",
+    "content": "TSA provides specific guidance for transgender, nonbinary, and gender nonconforming travelers regarding security screening procedures. This resource explains what to expect during security screening, how to prepare for appointments with Advanced Imaging Technology, and procedures for requesting a private screening. The guidelines clarify that TSA officers will never request that travelers remove clothing-revealing prosthetics and provide details on screening processes for medical equipment and binding garments.",
+    "lastUpdated": "2025-03-01T18:30:00.000Z",
+    "url": "https://www.tsa.gov/transgender-travelers",
     "tags": [
-      "international",
-      "documentation",
-      "safety",
-      "legal"
+      "travel",
+      "security",
+      "screening",
+      "documentation"
     ]
   },
   {
     "source": "Lambda Legal",
-    "title": "Identity Document Guide Under 2025 Policy Changes",
-    "content": "Identity Documents for Trans, Nonbinary, Gender-Nonconforming, and Intersex PeopleNote: This page will be routinely updated with new information as we learn and can confirm it. Last updated February 26, 2025.\n\nTransgender, gender-nonconforming, nonbinary, and intersex people (TGNCNBI) might be wondering what they should know about various identity documents following the sex and gender executive order issued by Trump on January 20, 2025. As various federal agencies take steps to implement the discriminatory Executive Order, we have compiled this resource to share basic information, review things you may want to consider moving forward, and offer additional resources available to help the TGNCNBI community.\n Keep in mind that this is not legal advice. So, if you can, it is strongly recommended to get legal advice about your situation from an attorney licensed to practice in your state. \n\nU.S. Passports and Consular Reports of Birth Abroad (CRBA)\nThings to know. \nThe Trump administration has changed the available gender marker options for U.S. passports and CRBAs. Among other actions, the Executive Order instructed the Secretary of State to implement changes that would effectively deny accurate passports to transgender, gender-nonconforming, nonbinary, and intersex people. On January 23, Secretary of State Marco Rubio told the State Department employees that applications requesting X gender markers and applications requesting gender marker changes (from F to M or M to F) should",
-    "lastUpdated": "2025-03-08T21:40:48.522Z",
-    "url": "https://lambdalegal.org/tgnc-checklist-under-trump/",
+    "title": "Know Your Rights: Transgender Travelers",
+    "content": "Lambda Legal provides comprehensive information on the rights of transgender travelers in airports, border crossings, and during security screenings. This resource outlines what identification is legally required, what questions officials may and may not ask, and what to do if you experience discrimination. The guide includes specific sections on international travel, domestic flights, and TSA screening procedures, with updated information reflecting recent policy changes affecting transgender travelers.",
+    "lastUpdated": "2025-02-28T16:00:00.000Z",
+    "url": "https://www.lambdalegal.org/know-your-rights/transgender-travelers",
     "tags": [
-      "documentation",
       "legal",
-      "international"
+      "rights",
+      "travel",
+      "documentation"
     ],
-    "name": "Identity Documents for Trans, Nonbinary, Gender-Nonconforming, and Intersex People"
+    "name": "Transgender Travel Rights"
   },
   {
     "source": "Garden State Equality",
@@ -320,5 +318,19 @@
       "gender marker"
     ],
     "name": "ACLU Transgender Passport Resource"
+  },
+  {
+    "source": "Garden State Equality",
+    "name": "Garden State Equality - LGBTQ Support",
+    "title": "Legal Support for Transgender and Nonbinary New Jersey Residents",
+    "content": "Garden State Equality offers comprehensive legal support for transgender and nonbinary residents of New Jersey, including assistance with name changes, gender marker updates on identity documents, and discrimination concerns. The organization provides free legal clinics, referrals to trans-affirming attorneys, and guidance on navigating state and federal systems. Their updated resources address recent changes to passport and federal ID policies.",
+    "url": "https://www.gardenstateequality.org/resources",
+    "lastUpdated": "2025-03-08T21:40:58.479Z",
+    "tags": [
+      "legal",
+      "community",
+      "support",
+      "resources"
+    ]
   }
 ]

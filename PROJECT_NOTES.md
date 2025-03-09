@@ -37,6 +37,35 @@ The project uses simple emoji icons rather than importing icon packages to keep 
 
 ## Recent Changes and Feedback (Last Updated: March 2025)
 
+### Content Organization and Tab Structure
+
+1. **Tab Naming Correction**
+   - Renamed "Legal Resources" tab back to its original name "Community Resources"
+   - ⚠️ NOTE: Never change tab names or major UI structures without explicit approval
+   - Main tabs structure should remain: Current Alerts, Travel Planning, Documentation, Community Resources, All Resources
+
+2. **Content Placement Adjustments**
+   - Moved Marco Rubio visa ban news story to Current Alerts (from Community Resources)
+   - Moved Germany travel advisory for transgender people to Current Alerts
+   - Removed ACLU workplace discrimination content as it's not relevant to the site's purpose
+   - Updated filtering logic to ensure proper content categorization
+   - Improved exclusion filters to prevent inappropriate content placement
+
+3. **Content Filtering Improvements (Latest Update)**
+   - Ensured visa-related alerts from Erin In The Morning and other news sites are properly displayed in the Travel Planning tab
+   - Removed TSA precheck information as it's not relevant to the site's specific focus
+   - Excluded State Department international travel notices not specific to trans/nonbinary travelers
+   - Removed STEP (Smart Traveler Enrollment Program) program information as it's not advisable given the site's focus on trans protections
+   - Updated filtering logic with better inclusion/exclusion criteria for more relevant content presentation
+
+4. **Content Organization Improvements (Latest)**
+   - Added static alerts to ensure critical information is always displayed
+   - Simplified content filtering with direct, readable conditions for each tab
+   - Applied consistent exclusion rules across all tabs 
+   - Renamed "Documentation" tab to "Identity documents" to better reflect its purpose
+   - Added factual domestic travel information without making unverified claims
+   - Improved readability of filtering code for easier future maintenance
+
 ### Visual Design and Content Improvements
 
 1. **Reduced Visual Clutter**
