@@ -12,6 +12,8 @@ const nextConfig = {
   
   // Ensure all paths work correctly without path prefixes
   // No basePath needed for Vercel deployment
+  
+  // Force a new deployment on Vercel
 }
 
 module.exports = nextConfig 
