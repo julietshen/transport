@@ -10,7 +10,7 @@
     "start": "next start",
     "scrape": "node src/scripts/scraper.js",
     "export": "next export",
-    "deploy": "npm run scrape && npm run build && npm run export"
+    "deploy": "npm run build"
   },
   "keywords": [
     "transgender",

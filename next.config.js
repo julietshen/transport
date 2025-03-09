@@ -1,20 +1,17 @@
 /** @type {import('next').NextConfig} */
 const nextConfig = {
   reactStrictMode: true,
-  // Remove the static export configuration for Vercel deployment
+  // We need to choose one approach - either static export OR server rendering
+  // For Vercel and to ensure proper asset loading, let's NOT use static export
   // output: 'export',
+  
+  // Configure images for Vercel
   images: {
     unoptimized: true,
   },
-  // Remove basePath for Vercel deployment
-  // Vercel handles the domain correctly without these settings
-  // ...(process.env.NODE_ENV === 'production' ? {
-  //   basePath: '/transport',
-  //   assetPrefix: '/transport/'
-  // } : {}),
-  // We can't use rewrites with output: 'export'
-  // The scraped data should be placed directly in the public folder
-  // and will be accessible at /scraped-data.json
+  
+  // Ensure all paths work correctly without path prefixes
+  // No basePath needed for Vercel deployment
 }
 
 module.exports = nextConfig 
