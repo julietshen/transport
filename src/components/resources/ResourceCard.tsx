@@ -25,10 +25,9 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
   const cardBg = useColorModeValue('white', 'gray.800');
   const dateColor = useColorModeValue('gray.600', 'gray.400');
   
-  // Try to translate the source if it's a known source
-  const translatedSource = resource.source.startsWith('sources.') ? 
-    t(resource.source) : 
-    t(`sources.${resource.source.toLowerCase().replace(/\s+/g, '')}`, { fallback: resource.source });
+  // Try to translate the source name using the sources translation keys
+  const sourceKey = resource.source.toLowerCase().replace(/\s+/g, '');
+  const translatedSource = t(`sources.${sourceKey}`, { fallback: resource.source });
     
   return (
     <Box
