@@ -1,0 +1,63 @@
+{
+  "general": {
+    "siteTitle": "トランスポート",
+    "siteDescription": "トランスジェンダーおよびノンバイナリー旅行者のための最新情報",
+    "loading": "読み込み中...",
+    "error": "データの読み込み中にエラーが発生しました。"
+  },
+  "header": {
+    "darkMode": "🌙 ダーク",
+    "lightMode": "☀️ ライト"
+  },
+  "search": {
+    "placeholder": "リソースを検索...",
+    "button": "検索",
+    "resultsFor": "すべてのカテゴリから「{term}」の結果を表示しています"
+  },
+  "filters": {
+    "allSources": "すべてのソース",
+    "allTypes": "すべてのタイプ"
+  },
+  "resource": {
+    "published": "公開日:",
+    "viewSource": "ソースを見る →"
+  },
+  "tabs": {
+    "currentAlerts": "現在のアラート",
+    "documentation": "書類",
+    "travelPlanning": "旅行計画",
+    "legalResources": "法的リソース",
+    "allResources": "すべてのリソース"
+  },
+  "alerts": {
+    "noResults": "現在のフィルターに一致するリソースはありません。",
+    "tryAdjusting": "検索やフィルターを調整して、お探しのものを見つけてください。"
+  },
+  "content": {
+    "alertsDescription": "トランスジェンダーおよびノンバイナリー旅行者のための重要な更新とタイムリーな情報。これらのアラートは、最近の政策変更、旅行制限、安全上の懸念を強調しています。",
+    "passportUpdate": "パスポート更新情報（2025年3月）：米国国務省は現在、Xジェンダーマーカー付きの新しいパスポートを発行していません。以前に発行されたXマーカー付きのパスポートは、有効期限まで有効です。一部の旅行者は、Xジェンダーマーカーパスポートの更新が出生時に割り当てられた性別で処理されていると報告しています。ガイダンスについては、全国トランスジェンダー平等センターまたはLambda Legalにお問い合わせください。",
+    "travelPlanningDescription": "空港セキュリティのヒント、宿泊施設、トランスジェンダーおよびノンバイナリー旅行者のための国別ガイダンスなど、旅行計画のための実用的な情報。",
+    "documentationDescription": "トランスジェンダーおよびノンバイナリー旅行者のためのパスポート、ID、その他の書類に関する情報。ジェンダーマーカーポリシーに関する最新情報も含まれています。",
+    "legalResourcesDescription": "トランスジェンダーおよびノンバイナリー旅行者のための法的情報とサポートリソース。アドボカシー団体や法的支援へのリンクが含まれています。",
+    "allResourcesDescription": "トランスジェンダーおよびノンバイナリー旅行者のためのリソース、アドバイザリー、情報の完全なリスト。"
+  },
+  "sources": {
+    "erinInTheMorning": "朝のエリン",
+    "theAdvocate": "アドボケイト",
+    "gardenStateEquality": "ガーデンステート平等",
+    "stateDepartment": "国務省",
+    "tsa": "TSA",
+    "lambdaLegal": "ラムダリーガル",
+    "aclu": "ACLU",
+    "ncte": "全国トランスジェンダー平等センター",
+    "permanentResource": "永久リソース"
+  },
+  "badges": {
+    "advisory": "勧告",
+    "documentation": "文書",
+    "legal": "法的",
+    "safety": "安全",
+    "important": "重要",
+    "info": "情報"
+  }
+} 

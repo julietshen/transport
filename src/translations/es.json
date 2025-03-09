@@ -1,0 +1,63 @@
+{
+  "general": {
+    "siteTitle": "Transporte",
+    "siteDescription": "Información actualizada para viajeros trans y no binarios",
+    "loading": "Cargando...",
+    "error": "Se produjo un error al cargar los datos."
+  },
+  "header": {
+    "darkMode": "🌙 Oscuro",
+    "lightMode": "☀️ Claro"
+  },
+  "search": {
+    "placeholder": "Buscar recursos...",
+    "button": "Buscar",
+    "resultsFor": "Mostrando resultados para \"{term}\" de todas las categorías"
+  },
+  "filters": {
+    "allSources": "Todas las Fuentes",
+    "allTypes": "Todos los Tipos"
+  },
+  "resource": {
+    "published": "Publicado:",
+    "viewSource": "Ver Fuente →"
+  },
+  "tabs": {
+    "currentAlerts": "Alertas Actuales",
+    "documentation": "Documentación",
+    "travelPlanning": "Planificación de Viaje",
+    "legalResources": "Recursos Legales",
+    "allResources": "Todos los Recursos"
+  },
+  "alerts": {
+    "noResults": "Ningún recurso coincide con sus filtros actuales.",
+    "tryAdjusting": "Intente ajustar su búsqueda o filtros para encontrar lo que está buscando."
+  },
+  "content": {
+    "alertsDescription": "Actualizaciones críticas e información urgente para viajeros trans y no binarios. Estas alertas destacan cambios recientes en políticas, restricciones de viaje y preocupaciones de seguridad.",
+    "passportUpdate": "ACTUALIZACIÓN DE PASAPORTES (Marzo 2025): El Departamento de Estado de EE. UU. actualmente ya no emite nuevos pasaportes con marcadores de género X. Los pasaportes con marcador X emitidos anteriormente siguen siendo válidos hasta su fecha de vencimiento. Algunos viajeros han informado que sus renovaciones de pasaportes con marcador de género X se están procesando con su sexo asignado al nacer. Para obtener orientación, considere contactar al Centro Nacional para la Igualdad Transgénero o Lambda Legal para asistencia.",
+    "travelPlanningDescription": "Información práctica para planificar su viaje, incluidos consejos para la seguridad aeroportuaria, alojamiento y orientación específica por país para viajeros trans y no binarios.",
+    "documentationDescription": "Información sobre pasaportes, identificaciones y otros asuntos de documentación para viajeros transgénero y no binarios, incluidas actualizaciones sobre políticas de marcadores de género.",
+    "legalResourcesDescription": "Información legal y recursos de apoyo para viajeros transgénero y no binarios, incluidos enlaces a organizaciones de defensa y asistencia legal.",
+    "allResourcesDescription": "Lista completa de recursos, avisos e información para viajeros transgénero y no binarios."
+  },
+  "sources": {
+    "erinInTheMorning": "ERIN EN LA MAÑANA",
+    "theAdvocate": "EL DEFENSOR",
+    "gardenStateEquality": "IGUALDAD DEL ESTADO JARDÍN",
+    "stateDepartment": "DEPARTAMENTO DE ESTADO",
+    "tsa": "TSA",
+    "lambdaLegal": "LAMBDA LEGAL",
+    "aclu": "ACLU",
+    "ncte": "CENTRO NACIONAL PARA LA IGUALDAD TRANSGÉNERO",
+    "permanentResource": "RECURSOS PERMANENTES"
+  },
+  "badges": {
+    "advisory": "AVISO",
+    "documentation": "DOCUMENTACIÓN",
+    "legal": "LEGAL",
+    "safety": "SEGURIDAD",
+    "important": "IMPORTANTE",
+    "info": "INFO"
+  }
+} 

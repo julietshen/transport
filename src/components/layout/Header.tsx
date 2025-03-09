@@ -1,4 +1,6 @@
-import { Flex, Heading, Text, VStack, Button } from '@chakra-ui/react';
+import { Flex, Heading, Text, VStack, Button, HStack } from '@chakra-ui/react';
+import { LanguageSwitcher } from './LanguageSwitcher';
+import { useTranslation } from '../../translations/useTranslation';
 
 interface HeaderProps {
   colorMode: 'light' | 'dark';
@@ -9,6 +11,8 @@ interface HeaderProps {
  * Site header component with title and theme toggle
  */
 export const Header: React.FC<HeaderProps> = ({ colorMode, toggleColorMode }) => {
+  const { t } = useTranslation();
+  
   return (
     <Flex justify="space-between" align="center" mb={8}>
       <VStack spacing={1} align="flex-start">
@@ -31,15 +35,18 @@ export const Header: React.FC<HeaderProps> = ({ colorMode, toggleColorMode }) =>
             paddingBottom: '2px'
           }}
         >
-          Transport
+          {t('general.siteTitle')}
         </Heading>
         <Text fontSize="md" color={colorMode === 'light' ? 'gray.600' : 'gray.300'}>
-          Updated information for trans and nonbinary travelers
+          {t('general.siteDescription')}
         </Text>
       </VStack>
-      <Button onClick={toggleColorMode} aria-label="Toggle color mode">
-        {colorMode === 'light' ? '🌙 Dark' : '☀️ Light'}
-      </Button>
+      <HStack spacing={4}>
+        <LanguageSwitcher />
+        <Button onClick={toggleColorMode} aria-label="Toggle color mode">
+          {colorMode === 'light' ? t('header.darkMode') : t('header.lightMode')}
+        </Button>
+      </HStack>
     </Flex>
   );
 }; 

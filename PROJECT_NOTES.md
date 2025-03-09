@@ -85,4 +85,36 @@ The project uses simple emoji icons rather than importing icon packages to keep 
 
 3. **Technical Debt**
    - Address any remaining i18n references in other components
-   - Fix syntax errors in index.tsx if they persist 
+   - Fix syntax errors in index.tsx if they persist
+
+## Localization Implementation (Added March 2025)
+
+A simple, non-invasive localization system has been implemented following KISS principles:
+
+1. **Translation System**
+   - Added support for 20 languages (top spoken languages worldwide)
+   - Created a simple React Context for language management
+   - Implemented a useTranslation hook for easy access in components
+   - Language preference saved in browser localStorage
+
+2. **Translation Files**
+   - Base language: English (en.json)
+   - Spanish translation included as an example (es.json)
+   - Translation files located in `src/translations/`
+   - Documentation on adding new languages in `src/translations/README.md`
+
+3. **UI Components**
+   - Added LanguageSwitcher component in the Header
+   - Updated UI components to use translated text
+   - Supports string interpolation for dynamic content
+
+4. **Affected Files**
+   - `_app.tsx`: Added LanguageProvider wrapper
+   - `Header.tsx`: Added LanguageSwitcher and translated text
+   - `SearchFilters.tsx`: Translated search interface
+   - `ResourceCard.tsx`: Translated resource presentation
+
+5. **Adding New Translations**
+   - Create a new JSON file in `src/translations/` named with language code
+   - Copy structure from en.json and translate values
+   - The language will be automatically available in the switcher 
