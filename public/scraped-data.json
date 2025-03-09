@@ -1,8 +1,8 @@
 [
   {
     "source": "Aclu",
-    "title": "LGBTQ Rights",
-    "content": "Know your rights\n\t\t\t\t\n\t\t\t\tBack to Know Your Rights main page\n\t\t\t\n\t\t\t\n\t\t\t\tLGBTQ Rights\t\t\t\n\t\t\n\t\t\n\t\t\tThe legal landscape for LGBTQ people is constantly evolving. If you think you have been discriminated against and would like our assistance, please visit our Report LGBTQ and HIV Discrimination Page and we can help you figure out whether you are protected under federal or state laws.\n\t\t\t\t\t  \n\t\t\t\n\t\t\t\tShare this issue:\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\tPrint\n\t\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\n\t\t  \n\t\t\n\t\n  \n\n\n\t\t\n\t\t\t\n\n  \n\t\t\n\n\t\t\n\t\n\t\t\n\t\t\t\n\t\t\t\t\n\n  \n\t\n\t  Select a scenario\n\t\n\t\n\t\n  \n  \n\n\n\t\n\t\tSelect a scenario\n\t\n\n\t\t\t\n\t\t\t\n\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\n\t\tCan an employer discriminate against me because of my sexual orientation or gender identity?\n\t\tYour rights\nEmployers with 15 or more employees are prohibited by Title VII of the 1964 Civil Rights Act from discriminating on the basis of sex. Some courts have ruled that Title VII also bans discrimination based on sexual orientation or gender identity. The Supreme Court recently announced it will take up this question in three cases. In addition, many states and cities have laws that ban this kind of discrimination.\nIf you believe that your rights have been violated\nIf you think that you have experienced discrimination at work, you can file a complaint with the U.S. Equal Employment Opportunity Commission (EEOC), which has taken the position that LGBTQ people are protected under Title VII. Try to document everything like emails or HR papers that might be relevant.\nWe enc",
+    "title": "ACLU Know Your Rights Guide for LGBTQ Individuals",
+    "content": "The ACLU provides comprehensive legal guidance for LGBTQ individuals facing discrimination. This resource explains your rights under federal and state laws, including workplace protections under Title VII of the Civil Rights Act, and offers step-by-step guidance on how to file complaints with the EEOC. The ACLU also offers direct assistance through their Report LGBTQ and HIV Discrimination Page and can connect you with local affiliates for personalized support.",
     "lastUpdated": "2025-03-08T21:40:58.461Z",
     "url": "https://www.aclu.org/know-your-rights/lgbtq-rights",
     "tags": [
@@ -12,18 +12,6 @@
       "healthcare"
     ],
     "name": "LGBTQ Rights"
-  },
-  {
-    "source": "Healthcare",
-    "name": "CDC - Transgender Health",
-    "title": "CDC - Transgender Health",
-    "content": "The Centers for Disease Control and Prevention provides health information for transgender individuals, including considerations for travelers. The resource covers preventive health measures, vaccination recommendations, and guidance for addressing healthcare needs while traveling domestically or internationally.",
-    "lastUpdated": "2025-03-08T21:40:58.435Z",
-    "url": "https://www.cdc.gov/lgbthealth/transgender-persons.htm",
-    "tags": [
-      "healthcare",
-      "safety"
-    ]
   },
   {
     "name": "Refuge Restrooms",
@@ -37,20 +25,6 @@
       "safety",
       "resources",
       "community"
-    ]
-  },
-  {
-    "name": "Lex",
-    "category": "Community",
-    "source": "Lex",
-    "title": "Lex - Text-Centered Community Platform",
-    "content": "Lex is a text-centered community app for the LGBTQ+ community that can help travelers connect with local communities and resources while on the road. The platform allows users to post personal ads and social messages, search by location, and connect with other users through direct messaging.",
-    "url": "https://thisislex.app/",
-    "lastUpdated": "2025-03-08T21:40:58.435Z",
-    "tags": [
-      "community",
-      "resources",
-      "social"
     ]
   },
   {
@@ -154,23 +128,10 @@
     ]
   },
   {
-    "source": "Healthcare",
-    "name": "WPATH Resources",
-    "title": "Resources",
-    "content": "Resources Career Center Seniors, Youth, Schools, Family Health Plan Providers Training CA SB855 Materials Public Statements Recommended Reading",
-    "lastUpdated": "2025-03-08T21:40:56.002Z",
-    "url": "https://www.wpath.org/resources",
-    "tags": [
-      "healthcare",
-      "medical",
-      "resources"
-    ]
-  },
-  {
     "source": "International",
     "name": "Equaldex - Global LGBTQ Rights Index",
     "title": "LGBT Rights by Country & Travel Guide | Equaldex",
-    "content": "let info_id = 999; let year = null; Equality IndexLegal IndexPublic Opinion IndexHomosexualityGay MarriageCensorshipChanging GenderGender-Affirming CareNon-Binary Gender RecognitionDiscriminationEmployment DiscriminationHousing DiscriminationAdoptionIntersex Infant SurgeryMilitaryDonating BloodConversion TherapyAge of ConsentMore... DATE 20272026Today202420232022202120202019201820172016201520142013201220112010200920082007200620052004200320022001200019991998199719961995199419931992199119901989198819871986198519841983198219811980197919781977197619751974197319721971197019691968196719661965196419631962196119601959195819571956195519541953195219511950 Equality Index ? 0 (Less Equal)100 (More Equal)",
+    "content": "Equaldex provides a comprehensive, up-to-date index of LGBTQ+ rights across different countries, essential for transgender travelers planning international trips. The platform offers detailed information about legal protections, recognition of gender identity, healthcare access, anti-discrimination laws, and overall safety ratings for destinations worldwide. The interactive map and country-specific pages help travelers make informed decisions about where it's safe to travel and what legal challenges they might face in different regions.",
     "lastUpdated": "2025-03-08T21:40:55.727Z",
     "url": "https://www.equaldex.com/",
     "tags": [
@@ -184,7 +145,7 @@
     "source": "International",
     "name": "ILGA World - International LGBTI Association",
     "title": "ILGA World is The International Lesbian, Gay, Bisexual, Trans, and Intersex Association",
-    "content": "International Women’s Day: Listen to the voices of women in our communities Watch this video on the 2025 International Women’s Day, as women in our communities share an important message: “We must continue to fight, and to fight united. #ForAllWomenAndGirls.” Read more Ending AIDS for all: the critical role of human rights in a sustainable and equitable response Join us on 5 March at a side event to the 58th Human Rights Council for an urgent appeal to world leaders to recognise human rights as essential to a sustainable and equitable response to HIV/AIDS Read more CSW 69 | Celebrating progress and reigniting momentum on gender equality Join us on 13 March during CSW 69 to reigniting momentum on gender equality, thirty years on the Beijing Declaration and Platform for Action Read more About us Since 1978, we have been committed to equal human rights for rainbow communities and their liberation from all forms of discrimination. Read our story What we do Since 1978, we have been committed to equal human rights for rainbow communities and their liberation from all forms of discrimination. See how we stand with you What you can do Since 1978, we have been committed to equal human rights for rainbow communities and their liberation from all forms of discrimination. Take action Annual Report 2023 The ILGA World 2023 Annual Report offers a summary of a year of remarkable achievements in our work for LGBTI communities worldwide Read more Laws on Us: A global overview of legal progres",
+    "content": "ILGA World provides crucial information for transgender travelers regarding global LGBTQI+ rights and protections across different countries. Their resources include country-specific legal information, safety assessments, and up-to-date reports on laws affecting transgender individuals internationally. The organization maintains a comprehensive database documenting legal recognition of gender identity, anti-discrimination protections, and areas where transgender travelers may face increased risks. This information enables transgender travelers to make informed decisions about international destinations and prepare appropriately for potential challenges they may encounter abroad.",
     "lastUpdated": "2025-03-08T21:40:55.142Z",
     "url": "https://ilga.org/",
     "tags": [
@@ -196,8 +157,8 @@
   {
     "source": "Legal",
     "name": "Transgender Law Center Resources",
-    "title": "Resources",
-    "content": "Resources Highlighted Resources Transgender People and Law Enforcement Interactions:The mechanisms for enforcing your rights when law enforcement has disregarded them can often be complex and inaccessible.Read More ID, PleaseMany people are surprised to discover that there is no “one stop” process for getting a name and/or gender marker updated to match their gender identity.Read More Reporting Law Enforcement Abuse: You have a right to report harassment, abuse, and discriminatory treatment by law enforcement.Read More ICE Raids: Know Your Rights as a TGNC ImmigrantKnow Your Rights as a Transgender or Gender Non-Conforming (TGNC) Immigrant.Read More 10 Tips for Working with Transgender PatientsGender identity is our internal understanding of our own gender. We all have a gender identity.Read More Tools for Transgender and Gender-Nonconforming People to Address DiscriminationA guide to help you better understand some of the legal options our community has to respond to discrimination and harassment.Read More <img decoding=\"async\" width=\"587\" height=\"800\" src=\"https://transgenderlawcenter.org/wp-content/uploads/2023/03/lit-3.png\" alt=\"A scrapbooked image of Feminine person standing with their back towards a camera, wearing pink and blue butterfly wings on their backs.\" class=\"wp-image-21495\" srcset=\"https://transgenderlawcenter.org/wp-content/uploads/2023/03/lit-3.png 587w, https://transgenderlawcenter.org/wp-content/uploads/2023/03/lit-3-220x300.png 220w\" sizes=\"(max-width: 58",
+    "title": "Legal Resources for Transgender Individuals Facing Discrimination",
+    "content": "The Transgender Law Center provides essential legal resources for transgender travelers, including guides on law enforcement interactions, ID document updates, and immigrant rights. Their comprehensive resources cover topics such as: 1) Strategies for enforcing your rights during police interactions, 2) Navigation of the complex processes for updating name and gender markers on identification documents, 3) Reporting law enforcement abuse and discrimination, 4) Know Your Rights information for transgender and gender non-conforming immigrants, and 5) Legal tools to address various forms of discrimination and harassment. These resources are particularly valuable for transgender travelers who may encounter legal challenges while traveling.",
     "lastUpdated": "2025-03-08T21:40:54.909Z",
     "url": "https://transgenderlawcenter.org/resources",
     "tags": [
@@ -209,8 +170,8 @@
   {
     "source": "Legal",
     "name": "ACLU LGBTQ Rights",
-    "title": "LGBTQ Rights",
-    "content": "Know your rights Back to Know Your Rights main page LGBTQ Rights The legal landscape for LGBTQ people is constantly evolving. If you think you have been discriminated against and would like our assistance, please visit our Report LGBTQ and HIV Discrimination Page and we can help you figure out whether you are protected under federal or state laws. Share this issue: Print Select a scenario Select a scenario Can an employer discriminate against me because of my sexual orientation or gender identity? Your rights Employers with 15 or more employees are prohibited by Title VII of the 1964 Civil Rights Act from discriminating on the basis of sex. Some courts have ruled that Title VII also bans discrimination based on sexual orientation or gender identity. The Supreme Court recently announced it will take up this question in three cases. In addition, many states and cities have laws that ban this kind of discrimination. If you believe that your rights have been violated If you think that you have experienced discrimination at work, you can file a complaint with the U.S. Equal Employment Opportunity Commission (EEOC), which has taken the position that LGBTQ people are protected under Title VII. Try to document everything like emails or HR papers that might be relevant. We encourage you to contact your local ACLU affiliate or the national ACLU LGBTQ & HIV Project for help weighing your options. Additional resources If you’ve been discriminated against based on sexual orientation or ge",
+    "title": "ACLU Legal Guide: Workplace and Public Discrimination Protections",
+    "content": "The ACLU provides critical information about the evolving legal landscape for LGBTQ people in the United States. This resource explains workplace discrimination protections under Title VII of the Civil Rights Act, which some courts have ruled extends to sexual orientation and gender identity discrimination. It details the process for filing complaints with the EEOC, gathering documentation of discrimination, and connecting with local ACLU affiliates for personalized legal support. This information is valuable for transgender travelers who may need to understand their legal protections while traveling within different U.S. jurisdictions.",
     "lastUpdated": "2025-03-08T21:40:54.315Z",
     "url": "https://www.aclu.org/know-your-rights/lgbtq-rights",
     "tags": [
@@ -222,7 +183,7 @@
   {
     "source": "Legal",
     "name": "National Center for Transgender Equality - Airport Rights",
-    "title": "National Center for Transgender Equality - Airport Rights",
+    "title": "Airport Security and Travel Rights Guide for Transgender Travelers",
     "content": "The National Center for Transgender Equality provides a detailed guide for transgender travelers navigating airport security. It covers ID requirements, security screening procedures, medical equipment considerations, and strategies for addressing potential issues. The guide emphasizes travelers' rights and offers contact information for reporting discrimination.",
     "lastUpdated": "2025-03-08T21:40:54.227Z",
     "url": "https://transequality.org/know-your-rights/airports-and-tsa",
@@ -236,8 +197,8 @@
   {
     "source": "Government",
     "name": "USA.gov Passport Information",
-    "title": "U.S. passports",
-    "content": "Home Travel U.S. passports Travel current page U.S. passports Apply for a new adult passport Renew an adult passport Get a passport for a minor under 18 Lost or stolen passports U.S. citizens traveling abroad Travel documents for children Travel to or within the U.S. Get a REAL ID Travel documents for foreign citizens returning to the U.S. Declare money to customs when you travel U.S. passports Find out how to apply for or renew a passport and what to do if your passport is lost or stolen. Apply for a new adult passport You need a passport to travel to most countries outside the U.S. Learn how to apply for a passport in person, check your application status, and get it changed or corrected. Renew an adult passport Find out if you can renew your passport or need a new one. Learn how to renew your passport online or by mail, get it changed or corrected, or what to do if it expires soon. Get a passport for a minor under 18 Find out how to get a child's passport, depending on their age. Lost or stolen passports If your passport is lost or stolen you must report it to the State Department right away. How you replace it depends on if you are inside or outside the U.S. SHARE THIS PAGE: Top",
+    "title": "USA.gov Official Guide to Passport Applications, Renewals and Replacement",
+    "content": "This official USA.gov resource provides comprehensive guidance on U.S. passport services, including applications for new passports, renewals, and replacements for lost or stolen documents. The guide covers specific requirements for adult passports, minor passports, and special circumstances. It explains both in-person and mail application processes, how to check application status, and what to do if your passport is lost while traveling internationally. This information is essential for transgender travelers planning international trips and needing to understand current passport requirements.",
     "lastUpdated": "2025-03-08T21:40:51.913Z",
     "url": "https://www.usa.gov/passport",
     "tags": [
@@ -249,7 +210,7 @@
   {
     "source": "Government",
     "name": "TSA Transgender Passenger Information",
-    "title": "TSA Transgender Passenger Information",
+    "title": "TSA Official Guidance for Transgender Passengers During Security Screening",
     "content": "The Transportation Security Administration (TSA) provides guidance for transgender passengers navigating airport security. The resource outlines AIT screening procedures, ID verification processes, and options for private screening. It also explains how to contact TSA Cares for additional assistance before traveling and emphasizes that all travelers must be screened regardless of gender identity.",
     "lastUpdated": "2025-03-08T21:40:51.782Z",
     "url": "https://www.tsa.gov/transgender-passengers",
@@ -263,7 +224,7 @@
     "source": "Government",
     "name": "State Department LGBTQI+ Travel Information",
     "title": "International Travel",
-    "content": "Travel.State.Gov > International Travel > Before You Go > Travelers with Special Considerations > LGB Travel Information Share this page: function printThePage() { window.print() } jQuery(document).ready(function () { const getDomainName = window.location.href; const getTitle = window.document.title; if (getDomainName.match(\"/congress-liaison-home/\") !== null || getDomainName.match(\"/special-issuance-agency-home/\") !== null) { $(\".share-buttons li\").slice(-2).addClass(\"hidden\") } document.getElementById('share-button-fb').href = \"https://www.facebook.com/sharer/sharer.php?u=\" + getDomainName + \"&amp;src=sdkpreparse\"; document.getElementById('twitter-share-button').href = \"https://twitter.com/intent/tweet?text=\" + getTitle + getDomainName; document.getElementById('share-button-email').href = \"mailto:?Subject=\" + getTitle + \"&body=\" + getDomainName; });",
+    "content": "The U.S. Department of State provides important travel guidance specifically for LGBTQI+ travelers. This resource includes country-specific information about laws that might affect LGBTQI+ visitors, safety considerations, and tips for navigating international travel safely. The information covers topics such as legal recognition of same-sex relationships, laws regarding gender expression, and areas where LGBTQI+ travelers may face increased scrutiny or discrimination. This is an essential resource for transgender travelers planning international trips.",
     "lastUpdated": "2025-03-08T21:40:48.878Z",
     "url": "https://travel.state.gov/content/travel/en/international-travel/before-you-go/travelers-with-special-considerations/lgbti.html",
     "tags": [
@@ -275,8 +236,8 @@
   },
   {
     "source": "Lambda Legal",
-    "title": "Identity Documents for Trans, Nonbinary, Gender-Nonconforming, and Intersex People",
-    "content": "Identity Documents for Trans, Nonbinary, Gender-Nonconforming, and Intersex PeopleNote: This page will be routinely updated with new information as we learn and can confirm it. Last updated February 26, 2025.\n\nTransgender, gender-nonconforming, nonbinary, and intersex people (TGNCNBI) might be wondering what they should know about various identity documents following the sex and gender executive order issued by Trump on January 20, 2025. As various federal agencies take steps to implement the discriminatory Executive Order, we have compiled this resource to share basic information, review things you may want to consider moving forward, and offer additional resources available to help the TGNCNBI community.\n Keep in mind that this is not legal advice. So, if you can, it is strongly recommended to get legal advice about your situation from an attorney licensed to practice in your state. \n\nU.S. Passports and Consular Reports of Birth Abroad (CRBA)\nThings to know. \nThe Trump administration has changed the available gender marker options for U.S. passports and CRBAs. Among other actions, the Executive Order instructed the Secretary of State to implement changes that would effectively deny accurate passports to transgender, gender-nonconforming, nonbinary, and intersex people. On January 23, Secretary of State Marco Rubio told the State Department employees that applications requesting X gender markers and applications requesting gender marker changes (from F to M or M to F) should",
+    "title": "Identity Document Guide Under 2025 Policy Changes",
+    "content": "Identity Documents for Trans, Nonbinary, Gender-Nonconforming, and Intersex PeopleNote: This page will be routinely updated with new information as we learn and can confirm it. Last updated February 26, 2025.\n\nTransgender, gender-nonconforming, nonbinary, and intersex people (TGNCNBI) might be wondering what they should know about various identity documents following the sex and gender executive order issued by Trump on January 20, 2025. As various federal agencies take steps to implement the discriminatory Executive Order, we have compiled this resource to share basic information, review things you may want to consider moving forward, and offer additional resources available to help the TGNCNBI community.\n Keep in mind that this is not legal advice. So, if you can, it is strongly recommended to get legal advice about your situation from an attorney licensed to practice in your state. \n\nU.S. Passports and Consular Reports of Birth Abroad (CRBA)\nThings to know. \nThe Trump administration has changed the available gender marker options for U.S. passports and CRBAs. Among other actions, the Executive Order instructed the Secretary of State to implement changes that would effectively deny accurate passports to transgender, gender-nonconforming, nonbinary, and intersex people. On January 23, Secretary of State Marco Rubio told the State Department employees that applications requesting X gender markers and applications requesting gender marker changes (from F to M or M to F) should",
     "lastUpdated": "2025-03-08T21:40:48.522Z",
     "url": "https://lambdalegal.org/tgnc-checklist-under-trump/",
     "tags": [
@@ -288,8 +249,8 @@
   },
   {
     "source": "Garden State Equality",
-    "title": "RELEASE: Travel Advisory for Nonbinary and Trans New Jersey Residents",
-    "content": "Updates\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\t\n\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\n\t\t\t\tFeatured Post, Press Release\t\t\t\t\n\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\t\t\t\t\n\t\t\t\t\t\t\t\t\t\tJanuary 28, 2025\t\t\t\t\t\n\t\t\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\tRELEASE: Travel Advisory for Nonbinary and Trans New Jersey Residents\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\n\t\t\t\t\t\nToday, Garden State Equality, New Jersey’s largest LGBTQ+ advocacy, education, and wellness organization, issued a travel advisory for nonbinary and trans New Jersey residents. Nonbinary and trans New Jersey residents must exercise caution when traveling internationally and are at risk when reentering the United States, particularly when using a passport with an X gender marker.\n\n\n\nThe state of federal identification documents, such as passports, visas, and Global Entry cards, has been changing rapidly since President Donald Trump took office last week and issued a sweeping executive order targeting nonbinary and trans people.\n\n\n\nAt present, United States passports with an X gender marker that were issued prior to the executive order are valid. However, Secretary of State Marco Rubio has stated that “guidance on existing passports containing an X sex marker will come via other channels.”\n\n\n\nThe situation continues to evolve quickly, and Garden State Equality will continue to keep New Jersey residents updated. We will also continue our commitment to hosting name and gender marker change pop-ups to",
+    "title": "Travel Advisory: Critical Information for Nonbinary and Trans New Jersey Residents",
+    "content": "Garden State Equality, New Jersey's largest LGBTQ+ advocacy organization, has issued an important travel advisory for nonbinary and transgender New Jersey residents. The advisory warns travelers to exercise caution when traveling internationally and notes heightened risks when reentering the United States, particularly for those using passports with X gender markers. The advisory explains that while X-marker passports issued before recent policy changes remain valid, their status is uncertain as Secretary of State Marco Rubio has indicated that further guidance is forthcoming. Garden State Equality commits to providing ongoing updates and continues to offer name and gender marker change assistance to community members.",
     "lastUpdated": "2025-03-08T21:40:48.413Z",
     "url": "https://www.gardenstateequality.org/release-travel-advisory-for-nonbinary-and-trans-new-jersey-residents/",
     "tags": [
@@ -303,12 +264,14 @@
   {
     "source": "U.S. Department of State",
     "title": "U.S. Passports",
-    "content": "Share this page:",
+    "content": "The U.S. State Department provides official information on gender marker options for U.S. passports. This resource details the requirements and procedures for updating gender markers on passports, which is critical information for transgender travelers. Due to recent policy changes in 2025, the page now explains the current restrictions on gender marker options and provides guidance for transgender individuals navigating the passport application or renewal process under the new regulations.",
     "lastUpdated": "2025-03-08T21:40:48.265Z",
     "url": "https://travel.state.gov/content/travel/en/passports/passport-help/sex-marker.html",
     "tags": [
-      "documentation"
+      "documentation",
+      "passport",
+      "identification"
     ],
-    "name": "U.S. Passports"
+    "name": "U.S. Passports Gender Marker Information"
   }
 ]
