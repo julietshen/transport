@@ -37,8 +37,14 @@ import {
   useResources
 } from '../utils/resources';
 
+// Import translation hook
+import { useTranslation } from '../translations/useTranslation';
+
 export default function Home() {
-  // Use the custom hook for resource management
+  // Use translation
+  const { t } = useTranslation();
+  
+  // Use resource management hook
   const {
     filteredData,
     isLoading,
@@ -66,7 +72,7 @@ export default function Home() {
 
   // Options for the search filters
   const sourceOptions = [
-    { value: 'all', label: 'All Sources' },
+    { value: 'all', label: t('filters.allSources') },
     { value: 'State Department', label: 'State Department' },
     { value: 'TSA', label: 'TSA' },
     { value: 'Lambda Legal', label: 'Lambda Legal' },
@@ -76,7 +82,7 @@ export default function Home() {
   ];
 
   const resourceTypeOptions = [
-    { value: 'all', label: 'All Types' },
+    { value: 'all', label: t('filters.allTypes') },
     { value: 'documentation', label: 'Documentation & ID' },
     { value: 'safety', label: 'Safety & Security' },
     { value: 'resources', label: 'Support Resources' },
@@ -86,8 +92,8 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>Transport - Information for Trans Travelers</title>
-        <meta name="description" content="Your comprehensive resource for transgender travel information, automatically updated with the latest guidance and advisories." />
+        <title>{t('general.siteTitle')} - Information for Trans Travelers</title>
+        <meta name="description" content={t('general.siteDescription')} />
       </Head>
 
       <Box 
@@ -99,8 +105,7 @@ export default function Home() {
           <Header colorMode={colorMode} toggleColorMode={toggleColorMode} />
 
           <Text fontSize="lg" color={colorMode === 'light' ? 'gray.700' : 'gray.300'} mb={8}>
-            Your comprehensive resource for transgender travel information, automatically updated with the latest guidance and advisories 
-            from government agencies and advocacy organizations.
+            {t('general.siteDescription')}
           </Text>
 
           {/* Loading, Error, or Content */}
@@ -130,65 +135,57 @@ export default function Home() {
                 onChange={(index) => setTabIndex(index)}
               >
                 <TabList>
-                  <Tab>Current Alerts</Tab>
-                  <Tab>Travel Planning</Tab>
-                  <Tab>Documentation</Tab>
-                  <Tab>Support Resources</Tab>
-                  <Tab>All Information</Tab>
+                  <Tab>{t('tabs.currentAlerts')}</Tab>
+                  <Tab>{t('tabs.travelPlanning')}</Tab>
+                  <Tab>{t('tabs.documentation')}</Tab>
+                  <Tab>{t('tabs.legalResources')}</Tab>
+                  <Tab>{t('tabs.allResources')}</Tab>
                 </TabList>
 
                 <TabPanels>
                   {/* CURRENT ALERTS TAB */}
                   <TabPanel>
                     <VStack spacing={6} align="stretch">
-                      <Heading size="lg" mb={2}>Current Alerts</Heading>
+                      <Heading size="lg" mb={2}>{t('tabs.currentAlerts')}</Heading>
                       <Text>
-                        Critical updates and time-sensitive information for trans and nonbinary travelers.
-                        These alerts highlight recent policy changes, travel restrictions, and safety concerns.
+                        {t('content.alertsDescription')}
                       </Text>
 
                       {/* Primary Passport Alert - Keep only this main alert for visual clarity */}
                       <Alert status="warning" borderRadius="md" mt={4}>
                         <AlertIcon />
                         <Text>
-                          PASSPORT UPDATE (March 2025): The U.S. State Department is currently no longer issuing new passports with X gender markers. 
-                          Previously issued X-marker passports remain valid until their expiration date. Some travelers have reported that 
-                          their X gender marker passport renewals are being processed with their sex assigned at birth. For guidance, 
-                          consider contacting the National Center for Transgender Equality or Lambda Legal for assistance.
+                          {t('content.passportUpdate')}
                         </Text>
                       </Alert>
 
                       {/* Travel Advisories as cards instead of alerts */}
                       <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6} mt={4}>
                         {filteredData
-                          .filter(item => 
+                          .filter(item => (
                             // Only include truly important, time-sensitive alerts in this section
-                            ((item.title.toLowerCase().includes('warning') && 
-                              item.lastUpdated && 
-                              new Date(item.lastUpdated) > new Date('2025-02-15')) || // Only recent warnings
-                             (item.title.toLowerCase().includes('advisory')) || // Include all advisories
-                             // New Jersey travel advisory
-                             (item.source?.toLowerCase().includes('garden state')) ||
-                             // Specifically include resources about current visa/entry policies  
-                             (item.source?.toLowerCase().includes('advocate') && 
-                              item.title.toLowerCase().includes('germany')) ||
-                             (item.source?.toLowerCase().includes('erin') && 
-                              item.title.toLowerCase().includes('rubio')))
-                             // Don't include Trans World Express in current alerts
-                             && !(item.source?.toLowerCase().includes('trans world express'))
-                          )
-                          .slice(0, 8) /* Limit alerts to avoid overwhelming */
-                          .map((resource, index) => (
+                            (item.title.toLowerCase().includes('warning') && 
+                             item.lastUpdated && 
+                             new Date(item.lastUpdated) > new Date('2025-02-15')) || // Only recent warnings
+                            (item.title.toLowerCase().includes('advisory')) || // Include all advisories
+                            // New Jersey travel advisory
+                            (item.source?.toLowerCase().includes('garden state')) ||
+                            // Specifically include resources about current visa/entry policies  
+                            (item.source?.toLowerCase().includes('advocate') && 
+                             item.title.toLowerCase().includes('germany')) ||
+                            (item.source?.toLowerCase().includes('erin') && 
+                             item.title.toLowerCase().includes('visa'))
+                          ))
+                          .map((item, index) => (
                             <ResourceCard
                               key={`alert-${index}`}
-                              resource={resource}
+                              resource={item}
                               colorMode={colorMode}
                               formatDate={formatDate}
                               getPriorityBadgeProps={getPriorityBadgeProps}
                               getResourceTypeWithYear={getResourceTypeWithYear}
                             />
-                          ))
-                        }
+                          ))}
                       </SimpleGrid>
                     </VStack>
                   </TabPanel>
@@ -196,88 +193,61 @@ export default function Home() {
                   {/* TRAVEL PLANNING TAB */}
                   <TabPanel>
                     <VStack spacing={6} align="stretch">
-                      <Heading size="lg" mb={2}>Travel Planning</Heading>
+                      <Heading size="lg" mb={2}>{t('tabs.travelPlanning')}</Heading>
                       <Text>
-                        Resources to help you plan your travel as a transgender or nonbinary person.
-                        Learn about preparing for security screening, what to pack, and other travel considerations.
+                        {t('content.travelPlanningDescription')}
                       </Text>
-
-                      {/* Move visa processing info alert to planning tab */}
-                      <Alert status="info" borderRadius="md" mt={4}>
-                        <AlertIcon />
-                        <Text>
-                          Recent reports suggest potential changes to visa processing for transgender travelers. Some advocacy 
-                          organizations have noted increased scrutiny and delays for certain applicants. While official policies 
-                          remain unclear, travelers should allow extra time for documentation processing and consider consulting 
-                          with organizations like the National Center for Transgender Equality or Lambda Legal for guidance.
-                        </Text>
-                      </Alert>
-
-                      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6} mt={4}>
+                      
+                      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
                         {filteredData
                           .filter(item => 
-                            item.title.toLowerCase().includes('planning') ||
-                            item.title.toLowerCase().includes('checklist') ||
-                            item.title.toLowerCase().includes('guide') ||
-                            item.title.toLowerCase().includes('tips') ||
-                            // Ensure emergency resources appear in planning
-                            item.tags?.includes('emergency') ||
-                            item.title.toLowerCase().includes('network')
+                            item.tags?.some(tag => 
+                              tag.toLowerCase().includes('travel') || 
+                              tag.toLowerCase().includes('planning') ||
+                              tag.toLowerCase().includes('security')
+                            ) ||
+                            item.title.toLowerCase().includes('travel') ||
+                            item.title.toLowerCase().includes('security') ||
+                            item.title.toLowerCase().includes('tsa') ||
+                            item.source?.toLowerCase().includes('tsa')
                           )
-                          .slice(0, 9)
                           .map((resource, index) => (
                             <ResourceCard
-                              key={`planning-${index}`}
+                              key={`travel-${index}`}
                               resource={resource}
                               colorMode={colorMode}
                               formatDate={formatDate}
                               getPriorityBadgeProps={getPriorityBadgeProps}
                               getResourceTypeWithYear={getResourceTypeWithYear}
                             />
-                          ))
-                        }
+                          ))}
                       </SimpleGrid>
                     </VStack>
                   </TabPanel>
-
+                  
                   {/* DOCUMENTATION TAB */}
                   <TabPanel>
                     <VStack spacing={6} align="stretch">
-                      <Heading size="lg" mb={2}>Documentation</Heading>
+                      <Heading size="lg" mb={2}>{t('tabs.documentation')}</Heading>
                       <Text>
-                        Important information about identity documents for transgender and nonbinary travelers,
-                        including passports, IDs, and required documentation for domestic and international travel.
+                        {t('content.documentationDescription')}
                       </Text>
-
-                      {/* Passport X Gender Marker Alert - Important for Documentation Tab */}
-                      <Alert status="warning" borderRadius="md" mt={4}>
-                        <AlertIcon />
-                        <Text>
-                          <strong>PASSPORT UPDATE (March 2025):</strong> The State Department has reportedly changed how it processes 
-                          gender markers on passports. Travelers with existing X gender marker passports report their documents remain 
-                          valid for travel through their expiration date, but renewals may be issued with sex assigned at birth. 
-                          Travel with documentation that matches all your other identification when possible. For guidance on navigating 
-                          these changes, contact advocacy organizations like the Transgender Law Center or Lambda Legal.
-                        </Text>
-                      </Alert>
-
-                      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6} mt={4}>
+                      
+                      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
                         {filteredData
                           .filter(item => 
+                            item.tags?.some(tag => 
+                              tag.toLowerCase().includes('documentation') || 
+                              tag.toLowerCase().includes('passport') ||
+                              tag.toLowerCase().includes('id') ||
+                              tag.toLowerCase().includes('identity')
+                            ) ||
                             item.title.toLowerCase().includes('passport') ||
                             item.title.toLowerCase().includes('id') ||
                             item.title.toLowerCase().includes('document') ||
-                            item.title.toLowerCase().includes('identification') ||
-                            // Include X gender marker content and passport gender issues
-                            item.content?.toLowerCase().includes('x gender marker') ||
-                            item.content?.toLowerCase().includes('gender marker') ||
-                            (item.content?.toLowerCase().includes('passport') && 
-                             item.content?.toLowerCase().includes('gender')) ||
-                            // Specifically ensure Travel While Trans is included in Documentation
-                            (item.name?.toLowerCase().includes('travel while trans')) ||
-                            (item.url && item.url.includes('travelwhiletrans.com'))
+                            item.content?.toLowerCase().includes('passport policy') ||
+                            item.content?.toLowerCase().includes('gender marker')
                           )
-                          .slice(0, 9)
                           .map((resource, index) => (
                             <ResourceCard
                               key={`doc-${index}`}
@@ -287,69 +257,78 @@ export default function Home() {
                               getPriorityBadgeProps={getPriorityBadgeProps}
                               getResourceTypeWithYear={getResourceTypeWithYear}
                             />
-                          ))
-                        }
+                          ))}
                       </SimpleGrid>
                     </VStack>
                   </TabPanel>
-
-                  {/* SUPPORT RESOURCES TAB */}
+                  
+                  {/* LEGAL RESOURCES TAB */}
                   <TabPanel>
                     <VStack spacing={6} align="stretch">
-                      <Heading size="lg" mb={2}>Support Resources</Heading>
+                      <Heading size="lg" mb={2}>{t('tabs.legalResources')}</Heading>
                       <Text>
-                        Organizations, hotlines, and services that provide assistance and support to transgender 
-                        and nonbinary travelers. These resources can help if you encounter issues during your travels.
+                        {t('content.legalResourcesDescription')}
                       </Text>
-
-                      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6} mt={4}>
+                      
+                      <SimpleGrid columns={{ base: 1, md: 2 }} spacing={6}>
                         {filteredData
                           .filter(item => 
-                            item.title.toLowerCase().includes('resource') ||
+                            item.tags?.some(tag => 
+                              tag.toLowerCase().includes('legal') || 
+                              tag.toLowerCase().includes('resource') ||
+                              tag.toLowerCase().includes('support')
+                            ) ||
+                            item.title.toLowerCase().includes('legal') ||
+                            item.title.toLowerCase().includes('right') ||
                             item.title.toLowerCase().includes('support') ||
-                            item.title.toLowerCase().includes('assistance') ||
-                            item.tags?.includes('community') ||
-                            // Specifically include support networks
-                            (item.source?.toLowerCase().includes('trans world express')) ||
-                            item.title.toLowerCase().includes('network') ||
-                            item.content?.toLowerCase().includes('support')
+                            item.source?.toLowerCase().includes('lambda legal') ||
+                            item.source?.toLowerCase().includes('aclu') ||
+                            item.source?.toLowerCase().includes('transgender law')
                           )
-                          .slice(0, 9)
                           .map((resource, index) => (
                             <ResourceCard
-                              key={`support-${index}`}
+                              key={`legal-${index}`}
                               resource={resource}
                               colorMode={colorMode}
                               formatDate={formatDate}
                               getPriorityBadgeProps={getPriorityBadgeProps}
                               getResourceTypeWithYear={getResourceTypeWithYear}
                             />
-                          ))
-                        }
+                          ))}
                       </SimpleGrid>
                     </VStack>
                   </TabPanel>
-
+                  
                   {/* ALL INFORMATION TAB */}
                   <TabPanel>
                     <VStack spacing={6} align="stretch">
-                      <Heading size="lg" mb={2}>All Resources</Heading>
+                      <Heading size="lg" mb={2}>{t('tabs.allResources')}</Heading>
                       <Text>
-                        Complete listing of all travel information and resources for transgender and nonbinary travelers.
+                        {t('content.allResourcesDescription')}
                       </Text>
-
-                      <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6} mt={4}>
-                        {filteredData.map((resource, index) => (
-                          <ResourceCard
-                            key={`all-${index}`}
-                            resource={resource}
-                            colorMode={colorMode}
-                            formatDate={formatDate}
-                            getPriorityBadgeProps={getPriorityBadgeProps}
-                            getResourceTypeWithYear={getResourceTypeWithYear}
-                          />
-                        ))}
-                      </SimpleGrid>
+                      
+                      {filteredData.length === 0 ? (
+                        <Alert status="info" borderRadius="md" mt={4}>
+                          <AlertIcon />
+                          <VStack align="start" spacing={2}>
+                            <Text fontWeight="medium">{t('alerts.noResults')}</Text>
+                            <Text>{t('alerts.tryAdjusting')}</Text>
+                          </VStack>
+                        </Alert>
+                      ) : (
+                        <SimpleGrid columns={{ base: 1, md: 2, lg: 3 }} spacing={6}>
+                          {filteredData.map((resource, index) => (
+                            <ResourceCard
+                              key={`all-${index}`}
+                              resource={resource}
+                              colorMode={colorMode}
+                              formatDate={formatDate}
+                              getPriorityBadgeProps={getPriorityBadgeProps}
+                              getResourceTypeWithYear={getResourceTypeWithYear}
+                            />
+                          ))}
+                        </SimpleGrid>
+                      )}
                     </VStack>
                   </TabPanel>
                 </TabPanels>

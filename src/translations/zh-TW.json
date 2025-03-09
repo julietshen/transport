@@ -1,0 +1,63 @@
+{
+  "general": {
+    "siteTitle": "交通運輸",
+    "siteDescription": "為跨性別和非二元旅行者提供最新資訊",
+    "loading": "載入中...",
+    "error": "載入資料時發生錯誤。"
+  },
+  "header": {
+    "darkMode": "🌙 暗黑模式",
+    "lightMode": "☀️ 明亮模式"
+  },
+  "search": {
+    "placeholder": "搜尋資源...",
+    "button": "搜尋",
+    "resultsFor": "顯示所有類別中 \"{term}\" 的結果"
+  },
+  "filters": {
+    "allSources": "所有來源",
+    "allTypes": "所有類型"
+  },
+  "resource": {
+    "published": "發佈時間：",
+    "viewSource": "查看來源 →"
+  },
+  "tabs": {
+    "currentAlerts": "當前警報",
+    "documentation": "文件",
+    "travelPlanning": "旅行規劃",
+    "legalResources": "法律資源",
+    "allResources": "所有資源"
+  },
+  "alerts": {
+    "noResults": "沒有資源符合您的當前篩選條件。",
+    "tryAdjusting": "嘗試調整搜尋或過濾條件，找到您要查找的內容。"
+  },
+  "content": {
+    "alertsDescription": "為跨性別和非二元旅行者提供關鍵更新和時效性資訊。這些警報突顯最近的政策變更、旅行限制和安全問題。",
+    "passportUpdate": "護照更新（2025年3月）：美國國務院目前不再發放帶有X性別標記的新護照。先前發放的帶有X標記的護照在到期日之前仍然有效。一些旅行者報告說，他們的X性別標記護照續期正在以其出生時指定的性別進行處理。如需指導，請考慮聯繫國家跨性別平等中心或Lambda法律援助。",
+    "travelPlanningDescription": "規劃旅程的實用資訊，包括機場安檢提示、住宿和針對跨性別和非二元旅行者的國家/地區特定指南。",
+    "documentationDescription": "有關跨性別和非二元旅行者的護照、身份證和其他文件問題的資訊，包括有關性別標記政策的更新。",
+    "legalResourcesDescription": "為跨性別和非二元旅行者提供法律資訊和支援資源，包括倡導組織和法律援助的連結。",
+    "allResourcesDescription": "為跨性別和非二元旅行者提供的資源、諮詢和資訊的完整列表。"
+  },
+  "sources": {
+    "erinInTheMorning": "早間艾琳",
+    "theAdvocate": "倡導者",
+    "gardenStateEquality": "花園州平等",
+    "stateDepartment": "國務院",
+    "tsa": "運輸安全管理局",
+    "lambdaLegal": "LAMBDA法律",
+    "aclu": "美國公民自由聯盟",
+    "ncte": "國家跨性別平等中心",
+    "permanentResource": "永久資源"
+  },
+  "badges": {
+    "advisory": "諮詢",
+    "documentation": "文件",
+    "legal": "法律",
+    "safety": "安全",
+    "important": "重要",
+    "info": "資訊"
+  }
+} 

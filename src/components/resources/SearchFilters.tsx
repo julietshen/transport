@@ -1,5 +1,6 @@
 import { Box, Input, InputGroup, InputLeftElement, InputRightElement, Button, Select, HStack, VStack, Text } from '@chakra-ui/react';
 import { useState, KeyboardEvent } from 'react';
+import { useTranslation } from '../../translations/useTranslation';
 
 interface SearchFiltersProps {
   searchTerm: string;
@@ -27,6 +28,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
 }) => {
   // Local state for the input value, initialized with current searchTerm
   const [inputValue, setInputValue] = useState(searchTerm);
+  const { t } = useTranslation();
 
   // Handler for search button click
   const handleSearch = () => {
@@ -47,7 +49,7 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
           🔍
         </InputLeftElement>
         <Input
-          placeholder="Search resources..."
+          placeholder={t('search.placeholder')}
           value={inputValue}
           onChange={(e) => setInputValue(e.target.value)}
           onKeyPress={handleKeyPress}
@@ -55,14 +57,14 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
         />
         <InputRightElement width="4.5rem">
           <Button h="1.75rem" size="sm" onClick={handleSearch}>
-            Search
+            {t('search.button')}
           </Button>
         </InputRightElement>
       </InputGroup>
       
       {searchTerm && (
         <Text fontSize="sm" color="gray.500">
-          Showing results for "{searchTerm}" from all categories
+          {t('search.resultsFor', { term: searchTerm })}
         </Text>
       )}
       

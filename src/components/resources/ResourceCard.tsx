@@ -1,5 +1,6 @@
 import { Box, Heading, Text, Link, Badge, HStack, VStack, useColorModeValue } from '@chakra-ui/react';
 import { ScrapedData } from '../../types/resources';
+import { useTranslation } from '../../translations/useTranslation';
 
 interface ResourceCardProps {
   resource: ScrapedData;
@@ -19,6 +20,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
   getPriorityBadgeProps,
   getResourceTypeWithYear
 }) => {
+  const { t } = useTranslation();
   const priorityBadge = getPriorityBadgeProps(resource);
   const cardBg = useColorModeValue('white', 'gray.800');
   const dateColor = useColorModeValue('gray.600', 'gray.400');
@@ -65,7 +67,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
         </HStack>
         
         <Text fontSize="sm" color={dateColor}>
-          Published: {formatDate(resource.lastUpdated)}
+          {t('resource.published')} {formatDate(resource.lastUpdated)}
         </Text>
         
         <Text noOfLines={3}>
@@ -78,7 +80,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
           color="blue.500" 
           fontWeight="medium"
         >
-          View Source →
+          {t('resource.viewSource')}
         </Link>
       </VStack>
     </Box>

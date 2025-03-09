@@ -1,0 +1,63 @@
+{
+  "general": {
+    "siteTitle": "交通运输",
+    "siteDescription": "为跨性别和非二元旅行者提供最新信息",
+    "loading": "加载中...",
+    "error": "加载数据时发生错误。"
+  },
+  "header": {
+    "darkMode": "🌙 暗黑模式",
+    "lightMode": "☀️ 明亮模式"
+  },
+  "search": {
+    "placeholder": "搜索资源...",
+    "button": "搜索",
+    "resultsFor": "显示所有类别中 \"{term}\" 的结果"
+  },
+  "filters": {
+    "allSources": "所有来源",
+    "allTypes": "所有类型"
+  },
+  "resource": {
+    "published": "发布时间：",
+    "viewSource": "查看来源 →"
+  },
+  "tabs": {
+    "currentAlerts": "当前警报",
+    "documentation": "文档",
+    "travelPlanning": "旅行规划",
+    "legalResources": "法律资源",
+    "allResources": "所有资源"
+  },
+  "alerts": {
+    "noResults": "没有资源符合您的当前筛选条件。",
+    "tryAdjusting": "尝试调整搜索或过滤条件，找到您要查找的内容。"
+  },
+  "content": {
+    "alertsDescription": "为跨性别和非二元旅行者提供关键更新和时效性信息。这些警报突出显示最近的政策变更、旅行限制和安全问题。",
+    "passportUpdate": "护照更新（2025年3月）：美国国务院目前不再发放带有X性别标记的新护照。以前发放的带有X标记的护照在到期日之前仍然有效。一些旅行者报告说，他们的X性别标记护照续期正在以其出生时指定的性别进行处理。如需指导，请考虑联系国家跨性别平等中心或Lambda法律援助。",
+    "travelPlanningDescription": "规划旅程的实用信息，包括机场安检提示、住宿和针对跨性别和非二元旅行者的国家/地区特定指南。",
+    "documentationDescription": "有关跨性别和非二元旅行者的护照、身份证和其他文件问题的信息，包括有关性别标记政策的更新。",
+    "legalResourcesDescription": "为跨性别和非二元旅行者提供法律信息和支持资源，包括倡导组织和法律援助的链接。",
+    "allResourcesDescription": "为跨性别和非二元旅行者提供的资源、咨询和信息的完整列表。"
+  },
+  "sources": {
+    "erinInTheMorning": "早间艾琳",
+    "theAdvocate": "倡导者",
+    "gardenStateEquality": "花园州平等",
+    "stateDepartment": "国务院",
+    "tsa": "运输安全管理局",
+    "lambdaLegal": "LAMBDA法律",
+    "aclu": "美国公民自由联盟",
+    "ncte": "国家跨性别平等中心",
+    "permanentResource": "永久资源"
+  },
+  "badges": {
+    "advisory": "咨询",
+    "documentation": "文档",
+    "legal": "法律",
+    "safety": "安全",
+    "important": "重要",
+    "info": "信息"
+  }
+} 

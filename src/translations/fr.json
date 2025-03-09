@@ -1,0 +1,63 @@
+{
+  "general": {
+    "siteTitle": "Transport",
+    "siteDescription": "Informations actualisées pour les voyageurs trans et non-binaires",
+    "loading": "Chargement...",
+    "error": "Une erreur est survenue lors du chargement des données."
+  },
+  "header": {
+    "darkMode": "🌙 Sombre",
+    "lightMode": "☀️ Clair"
+  },
+  "search": {
+    "placeholder": "Rechercher des ressources...",
+    "button": "Rechercher",
+    "resultsFor": "Affichage des résultats pour \"{term}\" de toutes les catégories"
+  },
+  "filters": {
+    "allSources": "Toutes les sources",
+    "allTypes": "Tous les types"
+  },
+  "resource": {
+    "published": "Publié le :",
+    "viewSource": "Voir la source →"
+  },
+  "tabs": {
+    "currentAlerts": "Alertes actuelles",
+    "documentation": "Documentation",
+    "travelPlanning": "Planification de voyage",
+    "legalResources": "Ressources juridiques",
+    "allResources": "Toutes les ressources"
+  },
+  "alerts": {
+    "noResults": "Aucune ressource ne correspond à vos filtres actuels.",
+    "tryAdjusting": "Essayez d'ajuster votre recherche ou vos filtres pour trouver ce que vous cherchez."
+  },
+  "content": {
+    "alertsDescription": "Mises à jour critiques et informations urgentes pour les voyageurs trans et non-binaires. Ces alertes mettent en évidence les changements récents de politiques, les restrictions de voyage et les préoccupations de sécurité.",
+    "passportUpdate": "MISE À JOUR PASSEPORT (Mars 2025) : Le Département d'État américain ne délivre plus de nouveaux passeports avec le marqueur de genre X. Les passeports avec marqueur X délivrés précédemment restent valables jusqu'à leur date d'expiration. Certains voyageurs ont signalé que le renouvellement de leur passeport avec marqueur de genre X est traité avec leur sexe assigné à la naissance. Pour obtenir des conseils, envisagez de contacter le National Center for Transgender Equality ou Lambda Legal pour obtenir de l'aide.",
+    "travelPlanningDescription": "Informations pratiques pour planifier votre voyage, y compris des conseils sur la sécurité aéroportuaire, l'hébergement et des orientations spécifiques par pays pour les voyageurs trans et non-binaires.",
+    "documentationDescription": "Informations sur les passeports, les pièces d'identité et autres préoccupations de documentation pour les voyageurs transgenres et non-binaires, y compris des mises à jour sur les politiques de marqueurs de genre.",
+    "legalResourcesDescription": "Informations juridiques et ressources de soutien pour les voyageurs transgenres et non-binaires, y compris des liens vers des organisations de défense des droits et d'assistance juridique.",
+    "allResourcesDescription": "Liste complète des ressources, avis et informations pour les voyageurs transgenres et non-binaires."
+  },
+  "sources": {
+    "erinInTheMorning": "ERIN LE MATIN",
+    "theAdvocate": "L'AVOCAT",
+    "gardenStateEquality": "ÉGALITÉ DE GARDEN STATE",
+    "stateDepartment": "DÉPARTEMENT D'ÉTAT",
+    "tsa": "TSA",
+    "lambdaLegal": "LAMBDA LEGAL",
+    "aclu": "ACLU",
+    "ncte": "CENTRE NATIONAL POUR L'ÉGALITÉ TRANSGENRE",
+    "permanentResource": "RESSOURCES PERMANENTES"
+  },
+  "badges": {
+    "advisory": "AVIS",
+    "documentation": "DOCUMENTATION",
+    "legal": "JURIDIQUE",
+    "safety": "SÉCURITÉ",
+    "important": "IMPORTANT",
+    "info": "INFO"
+  }
+} 
