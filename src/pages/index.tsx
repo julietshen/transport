@@ -92,8 +92,10 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{t('general.siteTitle')} - Information for Trans Travelers</title>
+        <title>{`${t('general.siteTitle')} - Information for Trans Travelers`}</title>
         <meta name="description" content={t('general.siteDescription')} />
+        <meta name="viewport" content="width=device-width, initial-scale=1" />
+        <link rel="icon" href="/favicon.ico" />
       </Head>
 
       <Box 
