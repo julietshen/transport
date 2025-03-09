@@ -1,4 +1,4 @@
-import { useState } from 'react';
+import { useState, useEffect } from 'react';
 import Head from 'next/head';
 import {
   Box,
@@ -50,6 +50,16 @@ export default function Home() {
     resourceType,
     setResourceType
   } = useResources();
+
+  // State for tracking the active tab index
+  const [tabIndex, setTabIndex] = useState(0);
+
+  // Effect to switch to "All Information" tab when search is performed
+  useEffect(() => {
+    if (searchTerm.trim() !== '') {
+      setTabIndex(4); // Switch to "All Information" tab when searching
+    }
+  }, [searchTerm]);
 
   // Get color mode
   const { colorMode, toggleColorMode } = useColorMode();
@@ -113,7 +123,12 @@ export default function Home() {
               />
 
               {/* Main content tabs */}
-              <Tabs colorScheme="blue" variant="enclosed">
+              <Tabs 
+                colorScheme="blue" 
+                variant="enclosed" 
+                index={tabIndex} 
+                onChange={(index) => setTabIndex(index)}
+              >
                 <TabList>
                   <Tab>Current Alerts</Tab>
                   <Tab>Travel Planning</Tab>
