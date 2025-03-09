@@ -25,12 +25,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
   const cardBg = useColorModeValue('white', 'gray.800');
   const dateColor = useColorModeValue('gray.600', 'gray.400');
   
-  // Attempt to translate title and content if they might be translation keys
-  // This supports both direct text and translation keys with fallback to original
-  const translatedTitle = resource.titleKey ? t(resource.titleKey) : resource.title;
-  const translatedContent = resource.contentKey ? t(resource.contentKey) : resource.content;
-  
-  // If source might have a translation, try to use it
+  // Try to translate the source if it's a known source
   const translatedSource = resource.source.startsWith('sources.') ? 
     t(resource.source) : 
     t(`sources.${resource.source.toLowerCase().replace(/\s+/g, '')}`, { fallback: resource.source });
@@ -46,7 +41,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
       _hover={{ boxShadow: 'md', transform: 'translateY(-2px)' }}
     >
       <VStack align="stretch" spacing={3}>
-        <Heading size="md">{translatedTitle}</Heading>
+        <Heading size="md">{resource.title}</Heading>
         
         <HStack wrap="wrap" spacing={2}>
           <Badge 
@@ -83,7 +78,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
         </Text>
         
         <Text noOfLines={3}>
-          {translatedContent}
+          {resource.content}
         </Text>
         
         <Link 
