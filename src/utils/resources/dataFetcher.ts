@@ -32,6 +32,7 @@ export const fetchResourceData = async (): Promise<ScrapedData[]> => {
     // Filter out removed resources
     return filterRemovedResources(jsonData);
   } catch (error) {
-    throw new Error(`Failed to fetch travel information: ${error.message}`);
+    const errorMessage = error instanceof Error ? error.message : String(error);
+    throw new Error(`Failed to fetch travel information: ${errorMessage}`);
   }
 }; 
