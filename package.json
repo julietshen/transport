@@ -1,7 +1,7 @@
 {
   "name": "transport",
   "version": "1.0.0",
-  "description": "Information hub for transgender travelers",
+  "description": "Information hub for trans and nonbinary travelers",
   "main": "index.js",
   "scripts": {
     "dev": "next dev",

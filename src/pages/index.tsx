@@ -331,7 +331,7 @@ export default function Home() {
     <>
       <Head>
         <title>Transport</title>
-        <meta name="description" content="Information hub for transgender travelers" />
+        <meta name="description" content="Information hub for trans and nonbinary travelers" />
       </Head>
       <Box minH="100vh" bg={colorMode === 'light' ? 'gray.50' : 'gray.900'}>
         <Container maxW="container.xl" py={8}>
@@ -346,19 +346,25 @@ export default function Home() {
                 <Heading
                   as="h1"
                   size="2xl"
-                  mb={4}
-                  bgGradient="linear(to-r, #5BCEFA, #F5A9B8, #FFFFFF, #F5A9B8, #5BCEFA)"
+                  fontWeight="extrabold"
+                  bgGradient={colorMode === 'light' 
+                    ? "linear(to-r, #1a5293, #c41d69, #ffffff, #c41d69, #1a5293)" 
+                    : "linear(to-r, #55b9ff, #ff77b1, #ffffff, #ff77b1, #55b9ff)"}
                   bgClip="text"
-                  textShadow={colorMode === 'light' ? '0px 0px 4px rgba(0, 0, 0, 0.4)' : 'none'}
+                  letterSpacing="1.5px"
+                  textShadow={colorMode === 'light' 
+                    ? '0px 1px 3px rgba(0, 0, 0, 0.6), 0px 0px 15px rgba(0, 0, 0, 0.2)' 
+                    : '0px 0px 10px rgba(255, 255, 255, 0.3)'}
                   sx={{
-                    WebkitTextStroke: colorMode === 'light' ? '1px rgba(0, 0, 0, 0.3)' : 'none',
-                    letterSpacing: '1px'
+                    WebkitTextStroke: colorMode === 'light' ? '1.5px rgba(0, 0, 0, 0.5)' : '1px rgba(255, 255, 255, 0.15)',
+                    transform: 'scale(1.02)',
+                    paddingBottom: '2px'
                   }}
                 >
                   Transport
                 </Heading>
                 <Text fontSize="md" color={colorMode === 'light' ? 'gray.600' : 'gray.300'}>
-                  Updated information for transgender travelers
+                  Updated information for trans and nonbinary travelers
                 </Text>
               </VStack>
               <Button onClick={toggleColorMode} aria-label="Toggle color mode">
@@ -400,7 +406,7 @@ export default function Home() {
                       <VStack spacing={6} align="stretch">
                         <Heading size="lg" mb={2}>Current Alerts</Heading>
                         <Text>
-                          Critical updates and time-sensitive information for transgender travelers.
+                          Critical updates and time-sensitive information for trans and nonbinary travelers.
                           These alerts highlight recent policy changes, travel restrictions, and safety concerns.
                         </Text>
                         
@@ -508,7 +514,7 @@ export default function Home() {
                             boxShadow="sm"
                           >
                             <VStack align="stretch" spacing={3}>
-                              <Heading size="md">State Department Visa Restriction for Transgender Travelers</Heading>
+                              <Heading size="md">State Department Visa Restriction for Trans and Nonbinary Travelers</Heading>
                               <HStack>
                                 <Badge colorScheme="blue" width="fit-content">
                                   Erin In The Morning
@@ -596,7 +602,7 @@ export default function Home() {
                           <VStack align="start" spacing={1}>
                             <Text fontWeight="bold">Recent Policy Changes Affecting Travel</Text>
                             <Text>
-                              Multiple countries have issued advisories about changing US policies for transgender travelers.
+                              Multiple countries have issued advisories about changing US policies for trans and nonbinary travelers.
                               Please check the Current Alerts tab for the latest critical updates before planning your trip.
                             </Text>
                           </VStack>
@@ -669,10 +675,11 @@ export default function Home() {
                               boxShadow="sm"
                             >
                               <VStack align="stretch" spacing={4}>
+                                <Text fontWeight="bold">State-Level Considerations</Text>
                                 <Text>
-                                  Due to the rapidly changing landscape of state laws affecting transgender travelers, we 
-                                  currently don't have up-to-date information on specific states. As of March 2025, numerous 
-                                  states have enacted or are considering legislation that may impact transgender travelers.
+                                  Due to the rapidly changing landscape of state laws affecting trans and nonbinary travelers, we
+                                  recommend researching local laws before travel. Currently, more than 20 US
+                                  states have enacted or are considering legislation that may impact trans and nonbinary travelers.
                                 </Text>
                                 <Text fontWeight="medium">
                                   We recommend checking the following resources for the most current state-by-state information:
@@ -784,8 +791,9 @@ export default function Home() {
                             >
                               <VStack align="stretch" spacing={4}>
                                 <Text>
-                                  TSA screening procedures can present challenges for transgender travelers. While we don't currently 
-                                  have updated information on specific screening policies, here are some general guidelines:
+                                  TSA screening procedures can present challenges for trans and nonbinary travelers. While we don't currently 
+                                  have reports about recent policy changes at security checkpoints, we recommend 
+                                  reviewing the resources in the Security Screening tab before your trip.
                                 </Text>
                                 <UnorderedList spacing={2} pl={4}>
                                   <ListItem>
@@ -824,7 +832,7 @@ export default function Home() {
                       <VStack spacing={6} align="stretch">
                         <Heading size="lg" mb={2}>Passport & ID Documentation</Heading>
                         <Text>
-                          Essential information about identification documents, passport requirements, and gender marker changes for transgender travelers.
+                          Essential information about identification documents, passport requirements, and gender marker changes for trans and nonbinary travelers.
                         </Text>
                         
                         {/* Critical alert about outdated information */}
@@ -940,7 +948,7 @@ export default function Home() {
                       <VStack spacing={6} align="stretch">
                         <Heading size="lg" mb={2}>Support Resources</Heading>
                         <Text>
-                          Community resources, healthcare information, and support networks for transgender travelers.
+                          Community resources, travel support networks, and safety tools for trans and nonbinary travelers.
                         </Text>
                         
                         <SimpleGrid columns={{ base: 1, md: 3 }} spacing={6}>
@@ -1020,7 +1028,7 @@ export default function Home() {
                           >
                             <VStack align="stretch" spacing={3}>
                               <Heading size="sm">Healthcare Resources</Heading>
-                              <Text fontSize="sm">Medical resources for transgender travelers</Text>
+                              <Text fontSize="sm">Medical resources for trans and nonbinary travelers</Text>
                               {data
                                 .filter(item => item.source === 'Healthcare' || (item.tags && item.tags.includes('healthcare')))
                                 .map((item, idx) => (
@@ -1202,7 +1210,7 @@ export default function Home() {
             <VStack spacing={4} align="stretch">
               <Heading size="md">About This Resource</Heading>
               <Text>
-                This information hub for transgender travelers is automatically updated with the latest information from official government 
+                This information hub for trans and nonbinary travelers is automatically updated with the latest information from official government 
                 sources and trusted advocacy organizations. The content is refreshed regularly to ensure accuracy during this time of 
                 constant policy change.
               </Text>

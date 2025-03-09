@@ -85,17 +85,18 @@
     ]
   },
   {
-    "name": "GLMA Provider Directory",
-    "category": "Healthcare",
-    "source": "GLMA",
-    "title": "GLMA - Healthcare Provider Directory",
-    "content": "The GLMA Provider Directory helps travelers locate LGBTQ+ affirming healthcare providers across the United States. The searchable database includes providers who have committed to creating welcoming environments for LGBTQ+ patients, with filters for specialty, location, and insurance acceptance.",
-    "url": "https://www.glma.org/directory/",
+    "name": "Travel While Trans",
+    "category": "Community",
+    "source": "Travel While Trans",
+    "title": "Travel While Trans - Interactive Safety Map for Trans Travelers",
+    "content": "Travel While Trans provides an interactive map and resources specifically designed for trans and nonbinary travelers. The site offers country-by-country safety information, legal status updates, and first-hand accounts from trans travelers about their experiences in different locations. This resource helps trans and nonbinary individuals make informed decisions about international travel safety and navigate potentially challenging situations abroad.",
+    "url": "https://travelwhiletrans.com/#/",
     "lastUpdated": "2025-03-08T21:40:58.435Z",
     "tags": [
-      "healthcare",
+      "safety",
+      "international",
       "resources",
-      "directory"
+      "community"
     ]
   },
   {
