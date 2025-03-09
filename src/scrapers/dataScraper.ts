@@ -4,7 +4,7 @@ const axios = require('axios');
 const fs = require('fs/promises');
 const path = require('path');
 
-interface ScrapedData {
+export interface ScrapedData {
   source: string;
   title: string;
   content: string;
@@ -12,7 +12,7 @@ interface ScrapedData {
   url: string;
 }
 
-async function scrapeStateDepartment(): Promise<ScrapedData> {
+export async function scrapeStateDepartment(): Promise<ScrapedData> {
   try {
     const browser = await puppeteer.launch({ 
       headless: 'new',
@@ -52,7 +52,7 @@ async function scrapeStateDepartment(): Promise<ScrapedData> {
   }
 }
 
-async function scrapeGardenState(): Promise<ScrapedData> {
+export async function scrapeGardenState(): Promise<ScrapedData> {
   try {
     const response = await axios.get('https://www.gardenstateequality.org/release-travel-advisory-for-nonbinary-and-trans-new-jersey-residents/');
     const $ = cheerio.load(response.data);
@@ -80,7 +80,7 @@ async function scrapeGardenState(): Promise<ScrapedData> {
   }
 }
 
-async function scrapeLambdaLegal(): Promise<ScrapedData> {
+export async function scrapeLambdaLegal(): Promise<ScrapedData> {
   try {
     const response = await axios.get('https://lambdalegal.org/tgnc-checklist-under-trump/');
     const $ = cheerio.load(response.data);
@@ -108,7 +108,7 @@ async function scrapeLambdaLegal(): Promise<ScrapedData> {
   }
 }
 
-async function scrapeAllSources(): Promise<ScrapedData[]> {
+export async function scrapeAllSources(): Promise<ScrapedData[]> {
   try {
     const [stateDept, gardenState, lambdaLegal] = await Promise.all([
       scrapeStateDepartment(),

@@ -1,4 +1,4 @@
-const { scrapeAllSources } = require('../scrapers/dataScraper');
+import { scrapeAllSources } from '../scrapers/dataScraper';
 
 process.on('unhandledRejection', (error) => {
   console.error('Unhandled promise rejection:', error);

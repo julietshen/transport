@@ -1,17 +1,48 @@
 [
   {
-    "source": "Aclu",
-    "title": "ACLU Know Your Rights Guide for LGBTQ Individuals",
-    "content": "The ACLU provides comprehensive legal guidance for LGBTQ individuals facing discrimination. This resource explains your rights under federal and state laws, including workplace protections under Title VII of the Civil Rights Act, and offers step-by-step guidance on how to file complaints with the EEOC. The ACLU also offers direct assistance through their Report LGBTQ and HIV Discrimination Page and can connect you with local affiliates for personalized support.",
-    "lastUpdated": "2025-03-08T21:40:58.461Z",
-    "url": "https://www.aclu.org/know-your-rights/lgbtq-rights",
+    "source": "The Advocate",
+    "title": "Germany Issues Warning for Transgender & Nonbinary People Traveling to the US",
+    "content": "The German government has issued an official warning for transgender and nonbinary citizens planning travel to the United States. A German official confirmed to The Advocate that 'transgender and nonbinary individuals traveling from Germany to the United States should contact the responsible U.S. authorities prior to travel to the U.S. to inquire about current entry regulations.' This advisory follows the Trump administration's recent executive order mandating that all government-issued documents, including passports, reflect only an individual's sex assigned at birth. The State Department has instructed consular officers to flag visa applications where there is 'reasonable suspicion' that an applicant is transgender, which critics say effectively bans transgender visa holders from entry.",
+    "lastUpdated": "2025-03-07T12:28:00.000Z",
+    "url": "https://www.advocate.com/news/germany-warns-transgender-travelers-us",
     "tags": [
-      "documentation",
-      "security",
+      "alert",
+      "safety",
+      "international",
       "legal",
-      "healthcare"
+      "warning"
     ],
-    "name": "LGBTQ Rights"
+    "name": "Germany Travel Warning"
+  },
+  {
+    "source": "Trans World Express",
+    "title": "Emergency Transport Network for Transgender Travelers in Distress",
+    "content": "Trans World Express is an emergency transport and accommodation network for transgender travelers who encounter hostile situations. The network consists of volunteer contacts across major cities who can provide temporary shelter, local transportation, legal assistance, and emergency medical referrals to transgender individuals facing discrimination, harassment, or safety threats while traveling. In light of recent visa restrictions and airport screening changes targeting transgender travelers, the service has expanded its rapid response capabilities to assist those who may be stranded at airports or border crossings. Contact information and emergency protocols are available on their secure website.",
+    "lastUpdated": "2025-03-12T09:45:00.000Z",
+    "url": "https://transworldexpress.org/",
+    "tags": [
+      "alert",
+      "safety",
+      "emergency",
+      "resources",
+      "community"
+    ],
+    "name": "Emergency Transport Network"
+  },
+  {
+    "source": "Erin in the Morning",
+    "title": "Marco Rubio May Have Just Banned Transgender People From Getting Visas",
+    "content": "Secretary of State Marco Rubio has ordered consular officials to deny visas to transgender applicants and their families under a directive claiming gender identity treatments are part of 'child trafficking operations'. The directive states any individual seeking a visa who 'might be transgender' must be scrutinized under elevated human trafficking concerns. This directly impacts transgender travelers as well as families with transgender children, many of whom are currently being denied visas. LGBTQ+ advocacy groups are reporting a drastic increase in visa denials since March 1, 2025.",
+    "lastUpdated": "2025-03-15T14:30:00.000Z",
+    "url": "https://www.erininthemorning.com/p/marco-rubio-may-have-just-banned",
+    "tags": [
+      "alert",
+      "safety",
+      "documentation",
+      "international",
+      "legal"
+    ],
+    "name": "Visa Ban Alert"
   },
   {
     "name": "Refuge Restrooms",
@@ -129,7 +160,7 @@
     ]
   },
   {
-    "source": "International",
+    "source": "Equaldex",
     "name": "Equaldex - Global LGBTQ Rights Index",
     "title": "LGBT Rights by Country & Travel Guide | Equaldex",
     "content": "Equaldex provides a comprehensive, up-to-date index of LGBTQ+ rights across different countries, essential for transgender travelers planning international trips. The platform offers detailed information about legal protections, recognition of gender identity, healthcare access, anti-discrimination laws, and overall safety ratings for destinations worldwide. The interactive map and country-specific pages help travelers make informed decisions about where it's safe to travel and what legal challenges they might face in different regions.",
@@ -143,7 +174,7 @@
     ]
   },
   {
-    "source": "International",
+    "source": "ILGA World",
     "name": "ILGA World - International LGBTI Association",
     "title": "ILGA World is The International Lesbian, Gay, Bisexual, Trans, and Intersex Association",
     "content": "ILGA World provides crucial information for transgender travelers regarding global LGBTQI+ rights and protections across different countries. Their resources include country-specific legal information, safety assessments, and up-to-date reports on laws affecting transgender individuals internationally. The organization maintains a comprehensive database documenting legal recognition of gender identity, anti-discrimination protections, and areas where transgender travelers may face increased risks. This information enables transgender travelers to make informed decisions about international destinations and prepare appropriately for potential challenges they may encounter abroad.",
@@ -156,7 +187,7 @@
     ]
   },
   {
-    "source": "Legal",
+    "source": "Transgender Law Center",
     "name": "Transgender Law Center Resources",
     "title": "Legal Resources for Transgender Individuals Facing Discrimination",
     "content": "The Transgender Law Center provides essential legal resources for transgender travelers, including guides on law enforcement interactions, ID document updates, and immigrant rights. Their comprehensive resources cover topics such as: 1) Strategies for enforcing your rights during police interactions, 2) Navigation of the complex processes for updating name and gender markers on identification documents, 3) Reporting law enforcement abuse and discrimination, 4) Know Your Rights information for transgender and gender non-conforming immigrants, and 5) Legal tools to address various forms of discrimination and harassment. These resources are particularly valuable for transgender travelers who may encounter legal challenges while traveling.",
@@ -169,7 +200,7 @@
     ]
   },
   {
-    "source": "Legal",
+    "source": "ACLU",
     "name": "ACLU LGBTQ Rights",
     "title": "ACLU Legal Guide: Workplace and Public Discrimination Protections",
     "content": "The ACLU provides critical information about the evolving legal landscape for LGBTQ people in the United States. This resource explains workplace discrimination protections under Title VII of the Civil Rights Act, which some courts have ruled extends to sexual orientation and gender identity discrimination. It details the process for filing complaints with the EEOC, gathering documentation of discrimination, and connecting with local ACLU affiliates for personalized legal support. This information is valuable for transgender travelers who may need to understand their legal protections while traveling within different U.S. jurisdictions.",
@@ -182,7 +213,7 @@
     ]
   },
   {
-    "source": "Legal",
+    "source": "National Center for Transgender Equality",
     "name": "National Center for Transgender Equality - Airport Rights",
     "title": "Airport Security and Travel Rights Guide for Transgender Travelers",
     "content": "The National Center for Transgender Equality provides a detailed guide for transgender travelers navigating airport security. It covers ID requirements, security screening procedures, medical equipment considerations, and strategies for addressing potential issues. The guide emphasizes travelers' rights and offers contact information for reporting discrimination.",
@@ -196,7 +227,7 @@
     ]
   },
   {
-    "source": "Government",
+    "source": "USA.gov",
     "name": "USA.gov Passport Information",
     "title": "USA.gov Official Guide to Passport Applications, Renewals and Replacement",
     "content": "This official USA.gov resource provides comprehensive guidance on U.S. passport services, including applications for new passports, renewals, and replacements for lost or stolen documents. The guide covers specific requirements for adult passports, minor passports, and special circumstances. It explains both in-person and mail application processes, how to check application status, and what to do if your passport is lost while traveling internationally. This information is essential for transgender travelers planning international trips and needing to understand current passport requirements.",
@@ -209,7 +240,7 @@
     ]
   },
   {
-    "source": "Government",
+    "source": "TSA",
     "name": "TSA Transgender Passenger Information",
     "title": "TSA Official Guidance for Transgender Passengers During Security Screening",
     "content": "The Transportation Security Administration (TSA) provides guidance for transgender passengers navigating airport security. The resource outlines AIT screening procedures, ID verification processes, and options for private screening. It also explains how to contact TSA Cares for additional assistance before traveling and emphasizes that all travelers must be screened regardless of gender identity.",
@@ -222,7 +253,7 @@
     ]
   },
   {
-    "source": "Government",
+    "source": "U.S. Department of State",
     "name": "State Department LGBTQI+ Travel Information",
     "title": "International Travel",
     "content": "The U.S. Department of State provides important travel guidance specifically for LGBTQI+ travelers. This resource includes country-specific information about laws that might affect LGBTQI+ visitors, safety considerations, and tips for navigating international travel safely. The information covers topics such as legal recognition of same-sex relationships, laws regarding gender expression, and areas where LGBTQI+ travelers may face increased scrutiny or discrimination. This is an essential resource for transgender travelers planning international trips.",
@@ -274,5 +305,20 @@
       "identification"
     ],
     "name": "U.S. Passports Gender Marker Information"
+  },
+  {
+    "source": "ACLU",
+    "title": "Transgender Passport Information Resource (2025)",
+    "content": "The ACLU provides critical information and guidance for transgender and nonbinary individuals regarding the recent changes to U.S. passport gender marker policies. This resource explains your rights, documents the current State Department practices, and offers recommendations for travelers with existing X gender marker passports or those seeking to obtain or renew passports. The page includes guidance on what to do if you encounter issues during the passport application process and how to report discrimination.",
+    "lastUpdated": "2025-03-20T10:00:00.000Z",
+    "url": "https://www.aclu.org/transpassports2025",
+    "tags": [
+      "documentation",
+      "passport",
+      "legal",
+      "rights",
+      "gender marker"
+    ],
+    "name": "ACLU Transgender Passport Resource"
   }
 ]

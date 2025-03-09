@@ -14,6 +14,35 @@ export default class MyDocument extends Document {
             crossOrigin="anonymous" 
             referrerPolicy="no-referrer" 
           />
+          
+          {/* Add fonts that support Arabic and Hebrew scripts */}
+          <link 
+            href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+Hebrew:wght@400;700&display=swap" 
+            rel="stylesheet"
+          />
+          
+          {/* Additional styles for RTL support */}
+          <style>
+            {`
+              /* Global RTL support */
+              html[dir="rtl"] .chakra-stack--row {
+                flex-direction: row-reverse;
+              }
+              
+              /* Font support for multiple languages */
+              :lang(ar) {
+                font-family: 'Noto Sans Arabic', sans-serif;
+              }
+              
+              :lang(he) {
+                font-family: 'Noto Sans Hebrew', sans-serif;
+              }
+              
+              body {
+                font-family: 'Noto Sans', sans-serif;
+              }
+            `}
+          </style>
         </Head>
         <body>
           <Main />

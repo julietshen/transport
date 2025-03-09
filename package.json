@@ -4,7 +4,8 @@
   "description": "Information hub for trans and nonbinary travelers",
   "main": "index.js",
   "scripts": {
-    "dev": "next dev",
+    "dev": "next dev -p 3000",
+    "dev:check": "bash scripts/ensure-port.sh && npm run dev",
     "build": "next build",
     "start": "next start",
     "scrape": "node src/scripts/scraper.js",
