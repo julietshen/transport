@@ -44,7 +44,8 @@ export const useResources = (): UseResourcesReturn => {
         setFilteredData(sortedData);
         setIsLoading(false);
       } catch (error) {
-        setError(error.message);
+        const errorMessage = error instanceof Error ? error.message : String(error);
+        setError(errorMessage);
         setIsLoading(false);
       }
     };
