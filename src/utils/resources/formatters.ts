@@ -34,6 +34,11 @@ export const getPriorityBadgeProps = (item: ScrapedData) => {
     return { colorScheme: 'red', label: 'Advisory' };
   }
   
+  // Check for news content
+  if (tags.includes('news')) {
+    return { colorScheme: 'blue', label: 'News' };
+  }
+  
   // Check for passport or identification documents
   if (title.includes('passport') || title.includes('id') || title.includes('identification') || 
       title.includes('document') || tags.includes('documentation')) {

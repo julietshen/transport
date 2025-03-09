@@ -58,6 +58,13 @@
     "legal": "LEGAL",
     "safety": "SAFETY",
     "important": "IMPORTANT",
-    "info": "INFO"
+    "info": "INFO",
+    "news": "NEWS"
+  },
+  "footer": {
+    "disclaimer": "This website is not a source of legal advice. The information provided may not be perfectly vetted or comprehensive. Always consult with legal professionals or established LGBTQ+ advocacy organizations when making travel decisions.",
+    "about": "This project was built by an ally to the transgender and nonbinary community. It is an open source project, and feedback and contributions are welcome.",
+    "githubButton": "GitHub Repository",
+    "githubUrl": "https://github.com/yourusername/transport"
   }
 } 

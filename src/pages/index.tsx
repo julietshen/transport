@@ -23,7 +23,8 @@ import {
   LoadingSpinner,
   ErrorAlert,
   SearchFilters,
-  ResourceCard
+  ResourceCard,
+  Footer
 } from '../components';
 
 // Import types
@@ -92,7 +93,7 @@ export default function Home() {
   return (
     <>
       <Head>
-        <title>{`${t('general.siteTitle')} - Information for Trans Travelers`}</title>
+        <title>{t('general.siteTitle')}</title>
         <meta name="description" content={t('general.siteDescription')} />
         <meta name="viewport" content="width=device-width, initial-scale=1" />
         <link rel="icon" href="/favicon.ico" />
@@ -101,14 +102,12 @@ export default function Home() {
       <Box 
         minH="100vh" 
         bg={colorMode === 'light' ? 'gray.50' : 'gray.900'}
+        display="flex"
+        flexDirection="column"
       >
-        <Container maxW="container.xl" py={8}>
+        <Container maxW="container.xl" py={8} flex="1">
           {/* Header */}
           <Header colorMode={colorMode} toggleColorMode={toggleColorMode} />
-
-          <Text fontSize="lg" color={colorMode === 'light' ? 'gray.700' : 'gray.300'} mb={8}>
-            {t('general.siteDescription')}
-          </Text>
 
           {/* Loading, Error, or Content */}
           {isLoading ? (
@@ -338,6 +337,7 @@ export default function Home() {
             </>
           )}
         </Container>
+        <Footer />
       </Box>
     </>
   );
