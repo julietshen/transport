@@ -20,7 +20,7 @@ export const Footer: React.FC = () => {
             </Text>
           </Box>
 
-          <Link href="https://github.com/yourusername/transport" isExternal>
+          <Link href="https://github.com/julietshen/transport" isExternal>
             <Button
               leftIcon={<Icon as={FaGithub} />}
               colorScheme="gray"
