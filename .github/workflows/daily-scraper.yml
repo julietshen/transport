@@ -1,0 +1,70 @@
+name: Daily Content Scraper
+
+on:
+  schedule:
+    # Run at 2:00 AM UTC every day
+    - cron: '0 2 * * *'
+  # Allow manual trigger
+  workflow_dispatch:
+
+jobs:
+  scrape-content:
+    runs-on: ubuntu-latest
+    
+    steps:
+      - name: Checkout code
+        uses: actions/checkout@v3
+        
+      - name: Setup Node.js
+        uses: actions/setup-node@v3
+        with:
+          node-version: '18'
+          cache: 'npm'
+          
+      - name: Install dependencies
+        run: npm ci
+        
+      - name: Install Puppeteer dependencies
+        run: |
+          sudo apt-get update
+          sudo apt-get install -y \
+            libx11-xcb1 \
+            libxcomposite1 \
+            libxcursor1 \
+            libxdamage1 \
+            libxi6 \
+            libxtst6 \
+            libnss3 \
+            libcups2 \
+            libxss1 \
+            libxrandr2 \
+            libasound2 \
+            libpangocairo-1.0-0 \
+            libatk1.0-0 \
+            libgtk-3-0
+        
+      - name: Run topic-based scraper
+        run: node src/scripts/topicScraper.js
+        
+      - name: Create Pull Request with new content
+        uses: peter-evans/create-pull-request@v5
+        with:
+          commit-message: "Content Update: New resources found by scraper"
+          branch: content-update
+          title: "New content for review"
+          body: |
+            ## New Content for Review
+            
+            The daily scraper has found new content for review.
+            
+            Please carefully review the changes to `public/content-queue.json` and approve or reject each item.
+            
+            **Remember:**
+            - Lambda Legal content should be tagged as "legal" not "documentation"
+            - News items should be tagged as "news"
+            - Don't include TSA precheck information
+            - Don't include general State Department notices
+            - Validate all tags and content before publishing
+            
+            After reviewing, either merge this PR to publish the content or modify as needed.
+          labels: content-review 

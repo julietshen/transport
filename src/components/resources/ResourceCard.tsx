@@ -1,27 +1,24 @@
 import { Box, Heading, Text, Link, Badge, HStack, VStack, useColorModeValue } from '@chakra-ui/react';
+import { ExternalLinkIcon } from '@chakra-ui/icons';
 import { ScrapedData } from '../../types/resources';
-import { useTranslation } from '../../translations/useTranslation';
+import { useTranslation } from '../../hooks/useTranslation';
+import { formatDate, getPriorityBadgeProps } from '../../utils/resources/formatters';
 
+/**
+ * Props for ResourceCard component
+ */
 interface ResourceCardProps {
   resource: ScrapedData;
-  colorMode: 'light' | 'dark';
-  formatDate: (date: string) => string;
-  getPriorityBadgeProps: (item: ScrapedData) => { colorScheme: string; label: string };
-  getResourceTypeWithYear: (item: ScrapedData) => string;
 }
 
 /**
  * Card component for displaying a single resource
  */
-export const ResourceCard: React.FC<ResourceCardProps> = ({
-  resource,
-  colorMode,
-  formatDate,
-  getPriorityBadgeProps,
-  getResourceTypeWithYear
-}) => {
+export const ResourceCard: React.FC<ResourceCardProps> = ({ resource }) => {
   const { t } = useTranslation();
   const priorityBadge = getPriorityBadgeProps(resource);
+  
+  // Color mode values
   const cardBg = useColorModeValue('white', 'gray.800');
   const dateColor = useColorModeValue('gray.600', 'gray.400');
   
@@ -44,8 +41,11 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
       boxShadow="sm"
       transition="all 0.2s"
       _hover={{ boxShadow: 'md', transform: 'translateY(-2px)' }}
+      height="100%"
+      display="flex"
+      flexDirection="column"
     >
-      <VStack align="stretch" spacing={3}>
+      <VStack align="stretch" spacing={3} flex="1">
         <Heading size="md">{resource.title}</Heading>
         
         <HStack wrap="wrap" spacing={2}>
@@ -74,7 +74,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
           >
             {priorityBadge.label && priorityBadge.label.startsWith('badges.') ? 
               t(priorityBadge.label) : 
-              t(`badges.${priorityBadge.label.toLowerCase()}`, { fallback: priorityBadge.label })}
+              t(`badges.${priorityBadge.label.toLowerCase()}`, priorityBadge.label)}
           </Badge>
         </HStack>
         
@@ -82,7 +82,7 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
           {t('resource.published')} {formatDate(resource.lastUpdated)}
         </Text>
         
-        <Text noOfLines={3}>
+        <Text noOfLines={3} flex="1">
           {resource.content}
         </Text>
         
@@ -91,8 +91,10 @@ export const ResourceCard: React.FC<ResourceCardProps> = ({
           isExternal 
           color="blue.500" 
           fontWeight="medium"
+          display="inline-flex"
+          alignItems="center"
         >
-          {t('resource.viewSource')}
+          {t('resource.viewSource')} <ExternalLinkIcon mx="2px" />
         </Link>
       </VStack>
     </Box>

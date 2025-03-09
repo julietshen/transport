@@ -1,14 +1,12 @@
 import { Box, Input, InputGroup, InputLeftElement, InputRightElement, Button, Select, HStack, VStack, Text } from '@chakra-ui/react';
 import { useState, KeyboardEvent } from 'react';
-import { useTranslation } from '../../translations/useTranslation';
+import { useTranslation } from '../../hooks/useTranslation';
+import { useResourceContext } from '../../context/ResourceContext';
 
+/**
+ * Props for SearchFilters component
+ */
 interface SearchFiltersProps {
-  searchTerm: string;
-  setSearchTerm: (term: string) => void;
-  selectedSource: string;
-  setSelectedSource: (source: string) => void;
-  resourceType: string;
-  setResourceType: (type: string) => void;
   sourceOptions: { value: string; label: string }[];
   resourceTypeOptions: { value: string; label: string }[];
 }
@@ -17,22 +15,26 @@ interface SearchFiltersProps {
  * Search and filters component for resources
  */
 export const SearchFilters: React.FC<SearchFiltersProps> = ({
-  searchTerm,
-  setSearchTerm,
-  selectedSource,
-  setSelectedSource,
-  resourceType,
-  setResourceType,
   sourceOptions,
   resourceTypeOptions
 }) => {
+  // Get state from ResourceContext
+  const { searchTerm, setSearchTerm, activeCategory, setActiveCategory } = useResourceContext();
+  
   // Local state for the input value, initialized with current searchTerm
   const [inputValue, setInputValue] = useState(searchTerm);
+  
+  // Use translation hook
   const { t } = useTranslation();
 
   // Handler for search button click
   const handleSearch = () => {
     setSearchTerm(inputValue);
+    
+    // Switch to All Resources when searching
+    if (inputValue.trim() !== '' && activeCategory !== 'allResources') {
+      setActiveCategory('allResources');
+    }
   };
 
   // Handler for Enter key press
@@ -71,8 +73,8 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
       <HStack>
         <Box flex="1">
           <Select
-            value={selectedSource}
-            onChange={(e) => setSelectedSource(e.target.value)}
+            value="all"
+            onChange={(e) => console.log('Source filter not implemented in new architecture')}
             variant="filled"
           >
             {sourceOptions.map(option => (
@@ -85,8 +87,8 @@ export const SearchFilters: React.FC<SearchFiltersProps> = ({
         
         <Box flex="1">
           <Select
-            value={resourceType}
-            onChange={(e) => setResourceType(e.target.value)}
+            value="all"
+            onChange={(e) => console.log('Resource type filter not implemented in new architecture')}
             variant="filled"
           >
             {resourceTypeOptions.map(option => (

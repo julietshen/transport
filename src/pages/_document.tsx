@@ -1,6 +1,31 @@
 import { Html, Head, Main, NextScript } from 'next/document';
 import Document from 'next/document';
 
+// Create a separate style component to avoid the title warning
+const GlobalStyles = () => (
+  <style dangerouslySetInnerHTML={{
+    __html: `
+      /* Global RTL support */
+      html[dir="rtl"] .chakra-stack--row {
+        flex-direction: row-reverse;
+      }
+      
+      /* Font support for multiple languages */
+      :lang(ar) {
+        font-family: 'Noto Sans Arabic', sans-serif;
+      }
+      
+      :lang(he) {
+        font-family: 'Noto Sans Hebrew', sans-serif;
+      }
+      
+      body {
+        font-family: 'Noto Sans', sans-serif;
+      }
+    `
+  }} />
+);
+
 export default class MyDocument extends Document {
   render() {
     return (
@@ -20,31 +45,9 @@ export default class MyDocument extends Document {
             href="https://fonts.googleapis.com/css2?family=Noto+Sans:wght@400;700&family=Noto+Sans+Arabic:wght@400;700&family=Noto+Sans+Hebrew:wght@400;700&display=swap" 
             rel="stylesheet"
           />
-          
-          {/* Additional styles for RTL support */}
-          <style>
-            {`
-              /* Global RTL support */
-              html[dir="rtl"] .chakra-stack--row {
-                flex-direction: row-reverse;
-              }
-              
-              /* Font support for multiple languages */
-              :lang(ar) {
-                font-family: 'Noto Sans Arabic', sans-serif;
-              }
-              
-              :lang(he) {
-                font-family: 'Noto Sans Hebrew', sans-serif;
-              }
-              
-              body {
-                font-family: 'Noto Sans', sans-serif;
-              }
-            `}
-          </style>
         </Head>
         <body>
+          <GlobalStyles />
           <Main />
           <NextScript />
         </body>

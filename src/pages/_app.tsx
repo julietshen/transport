@@ -1,6 +1,7 @@
 import { ChakraProvider, extendTheme } from '@chakra-ui/react';
 import type { AppProps } from 'next/app';
 import { LanguageProvider } from '../translations/LanguageContext';
+import { ResourceProvider } from '../context/ResourceContext';
 
 const theme = extendTheme({
   config: {
@@ -35,7 +36,9 @@ export default function App({ Component, pageProps }: AppProps) {
   return (
     <ChakraProvider theme={theme}>
       <LanguageProvider>
-        <Component {...pageProps} />
+        <ResourceProvider>
+          <Component {...pageProps} />
+        </ResourceProvider>
       </LanguageProvider>
     </ChakraProvider>
   );

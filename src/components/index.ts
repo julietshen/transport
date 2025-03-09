@@ -1,10 +1,18 @@
+/**
+ * Component barrel file
+ * Organizes and exports all components for easier imports throughout the application
+ */
+
 // Layout components
-export { Header } from './layout/Header';
-export { LoadingSpinner } from './layout/LoadingSpinner';
-export { ErrorAlert } from './layout/ErrorAlert';
-export { LanguageSwitcher } from './layout/LanguageSwitcher';
-export { Footer } from './layout/Footer';
+export * from './layout/Header';
+export * from './layout/Footer';
+export * from './layout/ErrorAlert';
+export * from './layout/LoadingSpinner';
+export * from './layout/LanguageSwitcher';
 
 // Resource components
-export { SearchFilters } from './resources/SearchFilters';
-export { ResourceCard } from './resources/ResourceCard'; 
+export * from './resources/ResourceCard';
+export * from './resources/SearchFilters';
+export * from './resources/ResourceList';
+export * from './resources/ResourceDetail';
+export * from './resources/ResourceCategories'; 

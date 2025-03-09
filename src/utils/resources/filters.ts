@@ -264,4 +264,53 @@ export const isResourceInCategory = (resource: ScrapedData, category: ResourceCa
   }
   
   return false;
+};
+
+/**
+ * Filter resources by category
+ * @param resources Array of scraped data items
+ * @param category Category to filter by
+ * @returns Filtered and sorted array of resources
+ */
+export const filterResourcesByCategory = (resources: ScrapedData[], category: string): ScrapedData[] => {
+  // If 'allResources' is selected, include everything
+  if (category === 'allResources') {
+    return [...resources].sort(sortByPriorityAndDate);
+  }
+  
+  // Otherwise, filter by the specific category
+  return resources
+    .filter(resource => isResourceInCategory(resource, category as ResourceCategory))
+    .sort(sortByPriorityAndDate);
+};
+
+/**
+ * Filter resources by search term
+ * @param resources Array of scraped data items
+ * @param term Search term to filter by
+ * @returns Filtered array of resources that match the search term
+ */
+export const filterResourcesBySearch = (resources: ScrapedData[], term: string): ScrapedData[] => {
+  if (!term.trim()) {
+    return resources;
+  }
+  
+  const searchTerms = term.toLowerCase().split(' ');
+  
+  return resources.filter(resource => {
+    const title = resource.title?.toLowerCase() || '';
+    const content = resource.content?.toLowerCase() || '';
+    const source = resource.source?.toLowerCase() || '';
+    const name = resource.name?.toLowerCase() || '';
+    const tags = resource.tags?.map(tag => tag.toLowerCase()).join(' ') || '';
+    
+    // Check if all search terms are found in any relevant field
+    return searchTerms.every(term => 
+      title.includes(term) || 
+      content.includes(term) || 
+      source.includes(term) || 
+      name.includes(term) || 
+      tags.includes(term)
+    );
+  });
 }; 

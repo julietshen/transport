@@ -22,4 +22,10 @@ export const fetchResourceData = async (): Promise<ScrapedData[]> => {
     const errorMessage = error instanceof Error ? error.message : String(error);
     throw new Error(`Failed to fetch travel information: ${errorMessage}`);
   }
-}; 
+};
+
+/**
+ * Alias for fetchResourceData to maintain backward compatibility
+ * This is the function imported by useResources.ts
+ */
+export const fetchResources = fetchResourceData; 

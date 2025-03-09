@@ -3,7 +3,9 @@
     "siteTitle": "Transport",
     "siteDescription": "Updated information for trans and nonbinary travelers",
     "loading": "Loading...",
-    "error": "An error occurred while loading the data."
+    "error": "An error occurred while loading the data.",
+    "noResourcesFound": "No resources found matching your criteria.",
+    "tryAdjusting": "Try adjusting your search or filters."
   },
   "header": {
     "darkMode": "🌙 Dark",
@@ -66,5 +68,10 @@
     "about": "This project was built by an ally to the transgender and nonbinary community. It is an open source project, and feedback and contributions are welcome.",
     "githubButton": "GitHub Repository",
     "githubUrl": "https://github.com/yourusername/transport"
-  }
+  },
+  "allResourcesHeading": "All Resources",
+  "currentAlertsHeading": "Current Alerts",
+  "documentationHeading": "Identity Documents",
+  "travelPlanningHeading": "Travel Planning",
+  "legalResourcesHeading": "Community Resources"
 } 
